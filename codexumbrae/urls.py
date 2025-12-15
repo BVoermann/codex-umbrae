@@ -17,8 +17,16 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from . import views
+from vampire import views as vampire_views
+from kult import views as kult_views
+from dnd import views as dnd_views
+from daggerheart import views as daggerheart_views
 
 urlpatterns = [
     path('', views.index, name='index'),
     path('admin/', admin.site.urls),
+    path('vampire/', vampire_views.home, name='vampire_home'),
+    path('kult/', kult_views.home, name='kult_home'),
+    path('dnd/', dnd_views.home, name='dnd_home'),
+    path('daggerheart/', daggerheart_views.home, name='daggerheart_home'),
 ]

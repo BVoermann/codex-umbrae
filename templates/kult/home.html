@@ -5,34 +5,257 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>KULT - Codex Umbrae</title>
-    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Courier New', 'Courier', monospace;
+            min-height: 100vh;
+            background: linear-gradient(135deg, #0a0a0f 0%, #1a1520 40%, #0f1a1a 70%, #05050a 100%);
+            background-attachment: fixed;
+            color: #c8c8c8;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            overflow: hidden;
+        }
+
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image:
+                radial-gradient(ellipse at 30% 20%, rgba(70, 50, 80, 0.12) 0%, transparent 50%),
+                radial-gradient(ellipse at 70% 80%, rgba(50, 70, 60, 0.08) 0%, transparent 60%),
+                radial-gradient(circle at 50% 50%, rgba(80, 60, 90, 0.05) 0%, transparent 80%);
+            pointer-events: none;
+            z-index: 1;
+            animation: pulse 8s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% {
+                opacity: 0.6;
+            }
+            50% {
+                opacity: 1;
+            }
+        }
+
+        body::after {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background:
+                repeating-linear-gradient(
+                    0deg,
+                    transparent,
+                    transparent 2px,
+                    rgba(120, 100, 130, 0.03) 2px,
+                    rgba(120, 100, 130, 0.03) 4px
+                );
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        .container {
+            position: relative;
+            z-index: 2;
+            width: 100%;
+            max-width: 1000px;
+        }
+
+        .title {
+            text-align: center;
+            font-size: 3.5rem;
+            margin-bottom: 0.5rem;
+            color: #9a8fa8;
+            text-shadow:
+                2px 2px 4px rgba(0, 0, 0, 0.8),
+                0 0 30px rgba(154, 143, 168, 0.3),
+                0 0 60px rgba(154, 143, 168, 0.15);
+            letter-spacing: 0.25em;
+            font-weight: 300;
+        }
+
+        .subtitle {
+            text-align: center;
+            font-size: 1rem;
+            margin-bottom: 2.5rem;
+            color: #7a8a7a;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+        }
+
+        .back-link {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .back-link a {
+            color: #808080;
+            text-decoration: none;
+            transition: color 0.3s ease;
+            font-size: 0.9rem;
+            letter-spacing: 0.05em;
+        }
+
+        .back-link a:hover {
+            color: #9a8fa8;
+        }
+
+        .nav-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+            margin-bottom: 3rem;
+        }
+
+        .nav-card {
+            background: rgba(15, 15, 20, 0.7);
+            border: 1px solid rgba(154, 143, 168, 0.2);
+            border-radius: 4px;
+            padding: 2rem 1.5rem;
+            text-align: center;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
+            position: relative;
+        }
+
+        .nav-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, rgba(154, 143, 168, 0.05) 0%, transparent 100%);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            pointer-events: none;
+        }
+
+        .nav-card:hover::before {
+            opacity: 1;
+        }
+
+        .nav-card:hover {
+            background: rgba(20, 20, 28, 0.9);
+            border-color: rgba(154, 143, 168, 0.4);
+            transform: translateY(-5px);
+            box-shadow: 0 8px 24px rgba(154, 143, 168, 0.2);
+        }
+
+        .nav-card h2 {
+            color: #b8b8b8;
+            font-size: 1.3rem;
+            margin-bottom: 0.8rem;
+            font-weight: 300;
+            letter-spacing: 0.1em;
+        }
+
+        .nav-card p {
+            color: #888;
+            font-size: 0.85rem;
+            line-height: 1.6;
+            font-family: 'Georgia', serif;
+        }
+
+        .welcome {
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto 3rem;
+            padding: 2rem;
+            background: rgba(10, 10, 15, 0.6);
+            border: 1px solid rgba(154, 143, 168, 0.15);
+            border-radius: 4px;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.5);
+        }
+
+        .welcome p {
+            font-size: 1.05rem;
+            line-height: 1.9;
+            color: #a8a8a8;
+            margin-bottom: 1rem;
+            font-family: 'Georgia', serif;
+        }
+
+        .welcome .quote {
+            color: #7a8a7a;
+            margin-top: 1.5rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid rgba(154, 143, 168, 0.15);
+            font-size: 0.95rem;
+            letter-spacing: 0.05em;
+        }
+
+        @media (max-width: 768px) {
+            .title {
+                font-size: 2.5rem;
+            }
+
+            .nav-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
 </head>
 <body>
     <div class="container">
-        <h1 class="title">KULT: Divinity Lost</h1>
-        <p style="text-align: center; color: #b8b8d1; margin-bottom: 2rem;">
-            <a href="{% url 'index' %}" style="color: #b8b8d1; text-decoration: underline;">← Back to Codex Umbrae</a>
-        </p>
+        <h1 class="title">KULT</h1>
+        <p class="subtitle">Divinity Lost</p>
 
-        <nav class="nav-bar">
-            <ul class="nav-links">
-                <li><a href="{% url 'kult_kampagnen' %}">Kampagnen</a></li>
-                <li><a href="{% url 'kult_sessions' %}">Sessions</a></li>
-                <li><a href="{% url 'kult_lore' %}">Lore</a></li>
-                <li><a href="{% url 'kult_charaktere' %}">Charaktere</a></li>
-                <li><a href="{% url 'kult_medien' %}">Medien</a></li>
-                <li><a href="{% url 'kult_suche' %}">Suche</a></li>
-            </ul>
-        </nav>
+        <div class="back-link">
+            <a href="{% url 'index' %}">← Back to Codex Umbrae</a>
+        </div>
 
-        <div style="text-align: center; color: #e0e0e0; max-width: 800px; margin: 0 auto;">
-            <p style="font-size: 1.2rem; margin-bottom: 1.5rem;">
-                Welcome to the KULT section of Codex Umbrae.
-                Reality is a lie. The truth is madness.
+        <div class="welcome">
+            <p>
+                Beyond the veil of reality lies the truth of our prison.
+                The illusion fractures. The metropolis bleeds.
             </p>
-            <p style="font-style: italic; color: #b8b8d1;">
-                More features coming soon...
+            <p class="quote">
+                We are but fragments of forgotten gods, wandering the labyrinth of lies.
             </p>
+        </div>
+
+        <div class="nav-grid">
+            <div class="nav-card">
+                <h2>Kampagnen</h2>
+                <p>Chronicles beyond sanity</p>
+            </div>
+            <div class="nav-card">
+                <h2>Sessions</h2>
+                <p>Descents into the truth</p>
+            </div>
+            <div class="nav-card">
+                <h2>Lore</h2>
+                <p>Forbidden knowledge</p>
+            </div>
+            <div class="nav-card">
+                <h2>Charaktere</h2>
+                <p>Prisoners of the metropolis</p>
+            </div>
+            <div class="nav-card">
+                <h2>Medien</h2>
+                <p>Visions of the broken world</p>
+            </div>
+            <div class="nav-card">
+                <h2>Suche</h2>
+                <p>Seek what should not be found</p>
+            </div>
         </div>
     </div>
 </body>
