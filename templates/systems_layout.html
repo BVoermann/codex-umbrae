@@ -1,0 +1,44 @@
+<div class="container">
+        <h1 class="title">{{ title }}</h1>
+        <p class="subtitle">{{ subtitle }}</p>
+
+        <div class="back-link">
+            <a href="{% url 'index' %}">← Back to Codex Umbrae</a>
+        </div>
+
+        <div class="welcome">
+            <p>
+                {{ welcome }}
+            </p>
+            <p class="quote">
+                {{ quote }}
+            </p>
+        </div>
+
+        <div class="nav-grid">
+            <div class="nav-card">
+                <h2>Kampagnen</h2>
+                <p>{{ campaign_subtitle }}</p>
+            </div>
+            <div class="nav-card">
+                <h2>Sessions</h2>
+                <p>{{ sessions_subtitle }}</p>
+            </div>
+            <div class="nav-card">
+                <h2>Lore</h2>
+                <p>{{ lore_subtitle }}</p>
+            </div>
+            <div class="nav-card">
+                <h2>Charaktere</h2>
+                <p>{{ characters_subtitle }}</p>
+            </div>
+            <div class="nav-card">
+                <h2>Medien</h2>
+                <p>{{ media_subtitle }}</p>
+            </div>
+            <div class="nav-card">
+                <h2>Suche</h2>
+                <p>{{ search_subtitle }}</p>
+            </div>
+        </div>
+    </div>
