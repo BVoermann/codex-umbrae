@@ -1,0 +1,33 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Codex Umbrae - TTRPG Portal</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <div class="container">
+        <h1 class="title">Codex Umbrae</h1>
+        <div class="systems-grid">
+            <a href="#" class="system-card">
+                <img src="{% static 'systems/dnd.jpg' %}" alt="Dungeons & Dragons">
+                <div class="system-name">D&D</div>
+            </a>
+            <a href="#" class="system-card">
+                <img src="{% static 'systems/daggerheart.jpg' %}" alt="Daggerheart">
+                <div class="system-name">Daggerheart</div>
+            </a>
+            <a href="#" class="system-card">
+                <img src="{% static 'systems/vampire.jpg' %}" alt="Vampire: The Masquerade">
+                <div class="system-name">Vampire</div>
+            </a>
+            <a href="#" class="system-card">
+                <img src="{% static 'systems/kult.jpg' %}" alt="KULT">
+                <div class="system-name">KULT</div>
+            </a>
+        </div>
+    </div>
+</body>
+</html>
