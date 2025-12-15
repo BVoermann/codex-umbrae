@@ -1,4 +1,16 @@
 codexumbrae/__pycache__/*
+daggerheart/__pycache__/*
+daggerheart/migrations/__pycache__/*
+dnd/__pycache__/*
+dnd/migrations/__pycache__/*
+kult/__pycache__/*
+kult/migrations/__pycache__/*
+vampire/__pycache__/*
+vampire/migrations/__pycache__/*
+venv/
+.idea/
+db.sqlite3
+codexumbrae/__pycache__/*
 venv/
 .idea/
 db.sqlite3

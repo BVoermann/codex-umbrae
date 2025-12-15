@@ -1,0 +1,39 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KULT - Codex Umbrae</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <div class="container">
+        <h1 class="title">KULT: Divinity Lost</h1>
+        <p style="text-align: center; color: #b8b8d1; margin-bottom: 2rem;">
+            <a href="{% url 'index' %}" style="color: #b8b8d1; text-decoration: underline;">← Back to Codex Umbrae</a>
+        </p>
+
+        <nav class="nav-bar">
+            <ul class="nav-links">
+                <li><a href="{% url 'kult_kampagnen' %}">Kampagnen</a></li>
+                <li><a href="{% url 'kult_sessions' %}">Sessions</a></li>
+                <li><a href="{% url 'kult_lore' %}">Lore</a></li>
+                <li><a href="{% url 'kult_charaktere' %}">Charaktere</a></li>
+                <li><a href="{% url 'kult_medien' %}">Medien</a></li>
+                <li><a href="{% url 'kult_suche' %}">Suche</a></li>
+            </ul>
+        </nav>
+
+        <div style="text-align: center; color: #e0e0e0; max-width: 800px; margin: 0 auto;">
+            <p style="font-size: 1.2rem; margin-bottom: 1.5rem;">
+                Welcome to the KULT section of Codex Umbrae.
+                Reality is a lie. The truth is madness.
+            </p>
+            <p style="font-style: italic; color: #b8b8d1;">
+                More features coming soon...
+            </p>
+        </div>
+    </div>
+</body>
+</html>

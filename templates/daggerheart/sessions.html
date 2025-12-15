@@ -1,0 +1,38 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daggerheart Sessions - Codex Umbrae</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <div class="container">
+        <h1 class="title">Daggerheart - Sessions</h1>
+        <p style="text-align: center; color: #b8b8d1; margin-bottom: 2rem;">
+            <a href="{% url 'daggerheart' %}" style="color: #b8b8d1; text-decoration: underline;">← Back to Daggerheart Home</a>
+        </p>
+
+        <nav class="nav-bar">
+            <ul class="nav-links">
+                <li><a href="{% url 'daggerheart_kampagnen' %}">Kampagnen</a></li>
+                <li><a href="{% url 'daggerheart_sessions' %}" class="active">Sessions</a></li>
+                <li><a href="{% url 'daggerheart_lore' %}">Lore</a></li>
+                <li><a href="{% url 'daggerheart_charaktere' %}">Charaktere</a></li>
+                <li><a href="{% url 'daggerheart_medien' %}">Medien</a></li>
+                <li><a href="{% url 'daggerheart_suche' %}">Suche</a></li>
+            </ul>
+        </nav>
+
+        <div style="text-align: center; color: #e0e0e0; max-width: 800px; margin: 0 auto;">
+            <p style="font-size: 1.2rem; margin-bottom: 1.5rem;">
+                Session notes and recaps.
+            </p>
+            <p style="font-style: italic; color: #b8b8d1;">
+                Content coming soon...
+            </p>
+        </div>
+    </div>
+</body>
+</html>
