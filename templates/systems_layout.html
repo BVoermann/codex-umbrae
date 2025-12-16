@@ -1,3 +1,13 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ site_title }}</title>
+    <link rel="stylesheet" href="{% static stylesheet %}">
+</head>
+<body>
 <div class="container">
         <h1 class="title">{{ title }}</h1>
         <p class="subtitle">{{ subtitle }}</p>
@@ -42,3 +52,5 @@
             </div>
         </div>
     </div>
+</body>
+</html>

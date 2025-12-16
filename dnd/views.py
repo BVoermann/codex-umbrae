@@ -4,6 +4,8 @@ from django.shortcuts import render
 def home(request):
     """D&D home page."""
     context = {
+        'stylesheet': 'css/dnd.css',
+        'site_title': 'D&D - Codex Umbrae',
         'title': 'Dungeons & Dragons',
         'subtitle': "The World's Greatest Roleplaying Game",
         'welcome': 'Gather your party and venture forth into realms of magic, mystery, and endless adventure. '
