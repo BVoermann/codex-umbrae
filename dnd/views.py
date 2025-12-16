@@ -18,4 +18,4 @@ def home(request):
         'media_subtitle': 'Treasures and artifacts',
         'search_subtitle': 'Explore the archives',
     }
-    return render(request, 'dnd/home.html', context=context)
+    return render(request, 'systems_home.html', context=context)
