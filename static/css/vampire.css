@@ -1,12 +1,4 @@
-{% load static %}
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vampire: The Masquerade - Codex Umbrae</title>
-    <style>
-        * {
+* {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
@@ -155,53 +147,3 @@
                 grid-template-columns: 1fr;
             }
         }
-    </style>
-</head>
-<body>
-    <div class="container">
-        <h1 class="title">Vampire: The Masquerade</h1>
-        <p class="subtitle">Enter the World of Darkness</p>
-
-        <div class="back-link">
-            <a href="{% url 'index' %}">← Back to Codex Umbrae</a>
-        </div>
-
-        <div class="welcome">
-            <p>
-                Welcome to the shadows, where immortal predators walk among mortals,
-                bound by ancient traditions and cursed with an insatiable thirst.
-            </p>
-            <p class="quote">
-                "A Beast I am, lest a Beast I become."
-            </p>
-        </div>
-
-        <div class="nav-grid">
-            <div class="nav-card">
-                <h2>Kampagnen</h2>
-                <p>Chronicles of darkness and intrigue</p>
-            </div>
-            <div class="nav-card">
-                <h2>Sessions</h2>
-                <p>Tales from the endless night</p>
-            </div>
-            <div class="nav-card">
-                <h2>Lore</h2>
-                <p>Secrets of the Kindred</p>
-            </div>
-            <div class="nav-card">
-                <h2>Charaktere</h2>
-                <p>Children of Caine</p>
-            </div>
-            <div class="nav-card">
-                <h2>Medien</h2>
-                <p>Images from the shadows</p>
-            </div>
-            <div class="nav-card">
-                <h2>Suche</h2>
-                <p>Hunt through the archives</p>
-            </div>
-        </div>
-    </div>
-</body>
-</html>

@@ -1,12 +1,4 @@
-{% load static %}
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Daggerheart - Codex Umbrae</title>
-    <style>
-        * {
+* {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
@@ -187,53 +179,3 @@
                 grid-template-columns: 1fr;
             }
         }
-    </style>
-</head>
-<body>
-    <div class="container">
-        <h1 class="title">Daggerheart</h1>
-        <p class="subtitle">Where Hope and Fear Collide</p>
-
-        <div class="back-link">
-            <a href="{% url 'index' %}">← Back to Codex Umbrae</a>
-        </div>
-
-        <div class="welcome">
-            <p>
-                In a world of magic and peril, heroes rise to face impossible odds.
-                Every roll of the dice brings both triumph and tribulation.
-            </p>
-            <p class="quote">
-                "Hope is the dagger, fear is the heart."
-            </p>
-        </div>
-
-        <div class="nav-grid">
-            <div class="nav-card">
-                <h2>Kampagnen</h2>
-                <p>Epic tales of adventure</p>
-            </div>
-            <div class="nav-card">
-                <h2>Sessions</h2>
-                <p>Chronicles of heroic deeds</p>
-            </div>
-            <div class="nav-card">
-                <h2>Lore</h2>
-                <p>Legends and mythology</p>
-            </div>
-            <div class="nav-card">
-                <h2>Charaktere</h2>
-                <p>Champions of the realm</p>
-            </div>
-            <div class="nav-card">
-                <h2>Medien</h2>
-                <p>Visions of wonder</p>
-            </div>
-            <div class="nav-card">
-                <h2>Suche</h2>
-                <p>Quest through the archives</p>
-            </div>
-        </div>
-    </div>
-</body>
-</html>

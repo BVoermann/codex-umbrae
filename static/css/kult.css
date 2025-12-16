@@ -1,12 +1,4 @@
-{% load static %}
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KULT - Codex Umbrae</title>
-    <style>
-        * {
+* {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
@@ -210,53 +202,3 @@
                 grid-template-columns: 1fr;
             }
         }
-    </style>
-</head>
-<body>
-    <div class="container">
-        <h1 class="title">KULT</h1>
-        <p class="subtitle">Divinity Lost</p>
-
-        <div class="back-link">
-            <a href="{% url 'index' %}">← Back to Codex Umbrae</a>
-        </div>
-
-        <div class="welcome">
-            <p>
-                Beyond the veil of reality lies the truth of our prison.
-                The illusion fractures. The metropolis bleeds.
-            </p>
-            <p class="quote">
-                We are but fragments of forgotten gods, wandering the labyrinth of lies.
-            </p>
-        </div>
-
-        <div class="nav-grid">
-            <div class="nav-card">
-                <h2>Kampagnen</h2>
-                <p>Chronicles beyond sanity</p>
-            </div>
-            <div class="nav-card">
-                <h2>Sessions</h2>
-                <p>Descents into the truth</p>
-            </div>
-            <div class="nav-card">
-                <h2>Lore</h2>
-                <p>Forbidden knowledge</p>
-            </div>
-            <div class="nav-card">
-                <h2>Charaktere</h2>
-                <p>Prisoners of the metropolis</p>
-            </div>
-            <div class="nav-card">
-                <h2>Medien</h2>
-                <p>Visions of the broken world</p>
-            </div>
-            <div class="nav-card">
-                <h2>Suche</h2>
-                <p>Seek what should not be found</p>
-            </div>
-        </div>
-    </div>
-</body>
-</html>
