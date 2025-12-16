@@ -1,21 +1,33 @@
 from django.shortcuts import render
+from dnd.information.context_dnd import context
 
 
 def home(request):
     """D&D home page."""
-    context = {
-        'stylesheet': 'css/dnd.css',
-        'site_title': 'D&D - Codex Umbrae',
-        'title': 'Dungeons & Dragons',
-        'subtitle': "The World's Greatest Roleplaying Game",
-        'welcome': 'Gather your party and venture forth into realms of magic, mystery, and endless adventure. '
-                   'Heroes are forged in the fires of battle and the bonds of friendship.',
-        'quote': '"The story is yours to tell."',
-        'campaign_subtitle': 'Legendary quests await',
-        'sessions_subtitle': 'Tales of valor and glory',
-        'lore_subtitle': 'Ancient knowledge',
-        'characters_subtitle': 'Heroes of legend',
-        'media_subtitle': 'Treasures and artifacts',
-        'search_subtitle': 'Explore the archives',
-    }
+
     return render(request, 'systems_home.html', context=context)
+
+
+def campaign(request):
+    """D&D campaign page."""
+    return render(request, 'systems_campaign.html', context=context)
+
+def sessions(request):
+    """D&D sessions page."""
+    return render(request, 'systems_sessions.html', context=context)
+
+def lore(request):
+    """D&D lore page."""
+    return render(request, 'systems_lore.html', context=context)
+
+def characters(request):
+    """D&D characters page."""
+    return render(request, 'systems_characters.html', context=context)
+
+def media(request):
+    """D&D media page."""
+    return render(request, 'systems_media.html', context=context)
+
+def search(request):
+    """D&D search page."""
+    return render(request, 'systems_search.html', context=context)

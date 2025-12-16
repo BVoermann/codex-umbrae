@@ -27,6 +27,12 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('vampire/', vampire_views.home, name='vampire_home'),
     path('kult/', kult_views.home, name='kult_home'),
-    path('dnd/', dnd_views.home, name='dnd_home'),
+    path('dnd/home/', dnd_views.home, name='dnd_home'),
     path('daggerheart/', daggerheart_views.home, name='daggerheart_home'),
+    path('dnd/campaign/', dnd_views.campaign, name='dnd_campaign'),
+    path('dnd/sessions', dnd_views.sessions, name='dnd_sessions'),
+    path('dnd/lore/', dnd_views.lore, name='dnd_lore'),
+    path('dnd/characters', dnd_views.characters, name='dnd_characters'),
+    path('dnd/media/', dnd_views.media, name='dnd_media'),
+    path('dnd/search/', dnd_views.search, name='dnd_search'),
 ]
