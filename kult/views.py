@@ -1,21 +1,31 @@
 from django.shortcuts import render
-
+from kult.information.context_kult import context
 
 def home(request):
-    """KULT home page."""
-    context = {
-        'stylesheet': 'css/kult.css',
-        'site_title': 'KULT - Codex Umbrae',
-        'title': 'KULT',
-        'subtitle': "Divinity Lost",
-        'welcome': 'Beyond the veil of reality lies the truth of our prison. '
-                   'The illusion fractures. The metropolis bleeds.',
-        'quote': '"We are but fragments of forgotten gods, wandering the labyrinth of lies."',
-        'campaign_subtitle': 'Chronicles beyond sanity',
-        'sessions_subtitle': 'Descents into the truth',
-        'lore_subtitle': 'Forbidden knowledge',
-        'characters_subtitle': 'Prisoners of the metropolis',
-        'media_subtitle': 'Visions of the broken world',
-        'search_subtitle': 'Seek what should not be found',
-    }
+    """Daggerheart home page."""
+
     return render(request, 'systems_home.html', context=context)
+
+def campaign(request):
+    """Daggerheart campaign page."""
+    return render(request, 'systems_campaign.html', context=context)
+
+def sessions(request):
+    """Daggerheart sessions page."""
+    return render(request, 'systems_sessions.html', context=context)
+
+def lore(request):
+    """Daggerheart lore page."""
+    return render(request, 'systems_lore.html', context=context)
+
+def characters(request):
+    """Daggerheart characters page."""
+    return render(request, 'systems_characters.html', context=context)
+
+def media(request):
+    """Daggerheart media page."""
+    return render(request, 'systems_media.html', context=context)
+
+def search(request):
+    """Daggerheart search page."""
+    return render(request, 'systems_search.html', context=context)

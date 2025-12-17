@@ -7,7 +7,6 @@ def home(request):
 
     return render(request, 'systems_home.html', context=context)
 
-
 def campaign(request):
     """D&D campaign page."""
     return render(request, 'systems_campaign.html', context=context)

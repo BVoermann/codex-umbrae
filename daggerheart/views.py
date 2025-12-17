@@ -1,21 +1,31 @@
 from django.shortcuts import render
-
+from daggerheart.information.context_daggerheart import context
 
 def home(request):
     """Daggerheart home page."""
-    context = {
-        'stylesheet': 'css/daggerheart.css',
-        'site_title': 'Daggerheart - Codex Umbrae',
-        'title': 'Daggerheart',
-        'subtitle': "Where Hope and Fear Collide",
-        'welcome': 'In a world of magic and peril, heroes rise to face impossible odds. '
-                   'Every roll of the dice brings both triumph and tribulation.',
-        'quote': '"Hope is the dagger, fear is the heart."',
-        'campaign_subtitle': 'Epic tales of adventure',
-        'sessions_subtitle': 'Chronicles of heroic deeds',
-        'lore_subtitle': 'Legends and mythology',
-        'characters_subtitle': 'Champions of the realm',
-        'media_subtitle': 'Visions of wonder',
-        'search_subtitle': 'Quest through the archives',
-    }
+
     return render(request, 'systems_home.html', context=context)
+
+def campaign(request):
+    """Daggerheart campaign page."""
+    return render(request, 'systems_campaign.html', context=context)
+
+def sessions(request):
+    """Daggerheart sessions page."""
+    return render(request, 'systems_sessions.html', context=context)
+
+def lore(request):
+    """Daggerheart lore page."""
+    return render(request, 'systems_lore.html', context=context)
+
+def characters(request):
+    """Daggerheart characters page."""
+    return render(request, 'systems_characters.html', context=context)
+
+def media(request):
+    """Daggerheart media page."""
+    return render(request, 'systems_media.html', context=context)
+
+def search(request):
+    """Daggerheart search page."""
+    return render(request, 'systems_search.html', context=context)
