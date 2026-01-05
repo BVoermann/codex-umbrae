@@ -7,6 +7,7 @@ kult/__pycache__/*
 kult/migrations/__pycache__/*
 vampire/__pycache__/*
 vampire/migrations/__pycache__/*
+*.pyc
 venv/
 .idea/
 db.sqlite3
