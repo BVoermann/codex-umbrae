@@ -1,5 +1,6 @@
 context = {
     'stylesheet': 'css/dnd.css',
+    'campaign_cards': 'dnd/campaign_cards.html',
     'site_title': 'D&D - Codex Umbrae',
     'title': 'Dungeons & Dragons',
     'subtitle': "The World's Greatest Roleplaying Game",

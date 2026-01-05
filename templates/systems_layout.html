@@ -24,8 +24,10 @@
                 {{ quote }}
             </p>
         </div>
-
-        <div class="nav-grid">
+        <div class="campaign-container nav-grid">
+        {% include campaign_cards %}
+        </div>
+        <div class="nav-grid campaign-grid">
             <a href="{% url url_campaign %}">
                 <div class="nav-card">
                     <h2>Kampagnen</h2>
@@ -64,5 +66,28 @@
             </a>
         </div>
     </div>
+  <script>
+      document.addEventListener('DOMContentLoaded', function() {
+          const campaignCards = document.querySelectorAll('.campaign');
+          const campaignGrid = document.querySelector('.campaign-grid');
+          const campaignGridLinks = campaignGrid.querySelectorAll('a');
+
+          campaignCards.forEach(function(card) {
+              card.addEventListener('click', function() {
+                  const campaignId = card.getAttribute('data-campaign-id');
+
+                  // Update all links in campaign-grid to include campaign parameter
+                  campaignGridLinks.forEach(function(link) {
+                      const url = new URL(link.href);
+                      url.searchParams.set('campaign', campaignId);
+                      link.href = url.toString();
+                  });
+
+                  // Show the campaign-grid
+                  campaignGrid.classList.add('visible');
+              });
+          });
+      });
+  </script>
 </body>
 </html>
