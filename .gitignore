@@ -14,3 +14,5 @@ codexumbrae/__pycache__/*
 venv/
 .idea/
 db.sqlite3
+passwords.env
+.env

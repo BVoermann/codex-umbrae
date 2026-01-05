@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from dnd.information.context_dnd import context
+from codexumbrae.auth_views import require_sessions_password
 
 
 def home(request):
@@ -11,6 +12,7 @@ def campaign(request):
     """D&D campaign page."""
     return render(request, 'systems_campaign.html', context=context)
 
+@require_sessions_password('dnd')
 def sessions(request):
     """D&D sessions page."""
     return render(request, 'systems_sessions.html', context=context)

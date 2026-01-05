@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from daggerheart.information.context_daggerheart import context
+from codexumbrae.auth_views import require_sessions_password
 
 def home(request):
     """Daggerheart home page."""
@@ -10,6 +11,7 @@ def campaign(request):
     """Daggerheart campaign page."""
     return render(request, 'systems_campaign.html', context=context)
 
+@require_sessions_password('daggerheart')
 def sessions(request):
     """Daggerheart sessions page."""
     return render(request, 'systems_sessions.html', context=context)

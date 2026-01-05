@@ -17,6 +17,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from . import views
+from . import auth_views
 from vampire import views as vampire_views
 from kult import views as kult_views
 from dnd import views as dnd_views
@@ -25,6 +26,13 @@ from daggerheart import views as daggerheart_views
 urlpatterns = [
     path('', views.index, name='index'),
     path('admin/', admin.site.urls),
+
+    # Sessions password protection URLs
+    path('dnd/sessions/login', lambda request: auth_views.sessions_password_check(request, 'dnd'), name='dnd_sessions_login'),
+    path('vampire/sessions/login', lambda request: auth_views.sessions_password_check(request, 'vampire'), name='vampire_sessions_login'),
+    path('kult/sessions/login', lambda request: auth_views.sessions_password_check(request, 'kult'), name='kult_sessions_login'),
+    path('daggerheart/sessions/login', lambda request: auth_views.sessions_password_check(request, 'daggerheart'), name='daggerheart_sessions_login'),
+
     path('vampire/', vampire_views.home, name='vampire_home'),
     path('kult/', kult_views.home, name='kult_home'),
     path('dnd/home/', dnd_views.home, name='dnd_home'),
