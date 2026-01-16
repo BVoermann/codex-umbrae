@@ -9,22 +9,6 @@
 </head>
 <body>
     <div class="container">
-        <h1 class="title">D&D - Kampagnen</h1>
-        <p style="text-align: center; color: #b8b8d1; margin-bottom: 2rem;">
-            <a href="{% url 'dnd_home' %}" style="color: #b8b8d1; text-decoration: underline;">← Back to D&D Home</a>
-        </p>
-
-        <nav class="nav-bar">
-            <ul class="nav-links">
-                <li><a href="{% url 'dnd_campaign' %}" class="active">Kampagnen</a></li>
-                <li><a href="{% url 'dnd_sessions' %}">Sessions</a></li>
-                <li><a href="{% url 'dnd_lore' %}">Lore</a></li>
-                <li><a href="{% url 'dnd_characters' %}">Charaktere</a></li>
-                <li><a href="{% url 'dnd_media' %}">Medien</a></li>
-                <li><a href="{% url 'dnd_search' %}">Suche</a></li>
-            </ul>
-        </nav>
-
         <div style="text-align: center; color: #e0e0e0; max-width: 800px; margin: 0 auto;">
             {% if request.GET.campaign == "Der-unermessliche-Zerfall" %}
                 Name der Kampagne: Der unermessliche Zerfall
