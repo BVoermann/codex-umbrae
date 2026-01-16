@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from dnd.information.context_dnd import context
+from dnd.information.episodes_dnd import playlist_UH, playlist_UZ, playlist_GvD
 from codexumbrae.auth_views import require_sessions_password
 
 
@@ -15,7 +16,16 @@ def campaign(request):
 @require_sessions_password('dnd')
 def sessions(request):
     """D&D sessions page."""
-    return render(request, 'systems_sessions.html', context=context)
+    campaign_id = request.GET.get('campaign')
+    if campaign_id == 'Der-unermessliche-Zerfall':
+        playlist_url = playlist_UZ
+    elif campaign_id == 'Das-Geheimnis-von-Dyadan':
+        playlist_url = playlist_GvD
+    elif campaign_id == "Unbekannte-Heimat":
+        playlist_url = playlist_UH
+    else:
+        playlist_url = []
+    return render(request, 'systems_sessions.html', context={**context, 'playlist_url': playlist_url,})
 
 def lore(request):
     """D&D lore page."""
