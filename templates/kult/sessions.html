@@ -1,16 +1,10 @@
-{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KULT Sessions - Codex Umbrae</title>
-    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    {% include 'kult/head.html' %}
 </head>
 <body>
     <div class="container">
-        <h1 class="title">KULT - Sessions</h1>
-        {% include 'kult/navbar.html' %}
 
         <div style="text-align: center; color: #e0e0e0; max-width: 800px; margin: 0 auto;">
             <p style="font-size: 1.2rem; margin-bottom: 1.5rem;">
