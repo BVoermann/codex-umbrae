@@ -1,0 +1,14 @@
+<p style="text-align: center; color: #b8b8d1; margin-bottom: 2rem;">
+    <a href="{% url 'dnd_home' %}" style="color: #b8b8d1; text-decoration: underline;">← Back to D&D Home</a>
+</p>
+
+<nav class="nav-bar">
+    <ul class="nav-links">
+        <li><a href="{% url 'dnd_campaign' %}">Kampagnen</a></li>
+        <li><a href="{% url 'dnd_sessions' %}">Sessions</a></li>
+        <li><a href="{% url 'dnd_lore' %}" class="active">Lore</a></li>
+        <li><a href="{% url 'dnd_characters' %}">Charaktere</a></li>
+        <li><a href="{% url 'dnd_media' %}">Medien</a></li>
+        <li><a href="{% url 'dnd_search' %}">Suche</a></li>
+    </ul>
+</nav>
