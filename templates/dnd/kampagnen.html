@@ -27,13 +27,72 @@
 
         <div style="text-align: center; color: #e0e0e0; max-width: 800px; margin: 0 auto;">
             {% if request.GET.campaign == "Der-unermessliche-Zerfall" %}
-                UZ!
+                Name der Kampagne: Der unermessliche Zerfall
+
+                Zusammenfassung: In der Stadt Ajas Bastion, im Norden von Loreth, findet sich eine Gruppe von
+                Abenteurern eines Abends in einer Taverne zusammen. Gemeinsam lösen sie das Rätsel um eine
+                geheimnisvolle Droge, die Personen in traumähnliche Zustände versetzt.
+
+                Status: Beendet
+
+                Charaktere:
+                Cithara von der Vogelweide,
+                Morrigan Windblüte,
+                Dith'orak Deeseng,
+                S'Nur'Ahr,
+                Etilos Lölicus von und zu Ticenstein
+
+                Wenn du das Passwort hast, um auf die Sessions zuzugreifen, kannst du das
+                <a href="{% url 'dnd_sessions' %}">hier</a> tun.
+
+                Weitere Informationen zu der Welt Nirada, in der die Kampagne spielt, bekommst du
+                <a href="{% url 'dnd_lore' %}">hier</a>.
             {% endif %}
             {% if request.GET.campaign == "Das-Geheimnis-von-Dyadan" %}
-                GvD!
+                Name der Kampagne: Das Geheimnis von Dyadan
+
+                Zusammenfassung: Im Wald Dyadan, im süd-westlichen Teil von Loreth, treffen sich sehr verschiedene
+                Personen, die gemeinsam ein Abenteuer erleben. Von einem Ork-Stamm über einen Adligen bis
+                zu einem Erz-Fey manövrieren sie sich in die eigenartigsten Situationen.
+
+                Status: Beendet
+
+                Charaktere:
+                Cithara von der Vogelweide
+                Morrigan Windblüte
+                Sneeks
+                Chronofell
+                Brombur Klauth
+                Gwairan (bis Session 5) / Amelia Eisenherz (ab Session 6)
+
+                Wenn du das Passwort hast, um auf die Sessions zuzugreifen, kannst du das
+                <a href="{% url 'dnd_sessions' %}">hier</a> tun.
+
+                Weitere Informationen zu der Welt Nirada, in der die Kampagne spielt, bekommst du
+                <a href="{% url 'dnd_lore' %}">hier</a>.
             {% endif %}
             {% if request.GET.campaign == "Unbekannte-Heimat" %}
-                UH!
+                Name der Kampagne: Unbekannte Heimat
+
+                Zusammenfassung: Südlich des Kontinents, auf einem Schiff im Adamo-Archipel, segeln die Abenteurer als
+                verkappte Piratencrew von Insel zu Insel und entdecken allerlei verschiedene Kulturen,
+                Personen und lösen die unterschiedlichsten Rätsel.
+
+                Status: Pausiert
+
+                Charaktere:
+                Gino
+                Isolde
+                Kimberlee Kupferschuppe
+                Ophelia Ula
+                Aegis
+                Calypso Farrai
+
+                Wenn du das Passwort hast, um auf die Sessions zuzugreifen, kannst du das
+                <a href="{% url 'dnd_sessions' %}">hier</a> tun.
+
+                Weitere Informationen zu der Welt Nirada, in der die Kampagne spielt, bekommst du
+                <a href="{% url 'dnd_lore' %}">hier</a>.
             {% endif %}
             <p style="font-size: 1.2rem; margin-bottom: 1.5rem;">
                 Campaign management and tracking.
