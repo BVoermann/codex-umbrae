@@ -107,6 +107,38 @@
             color: #9a8fa8;
         }
 
+        .nav-bar {
+            margin-bottom: 2rem;
+        }
+
+        .nav-links {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 0.5rem 1rem;
+            list-style: none;
+            padding: 1rem;
+            background: rgba(15, 15, 20, 0.7);
+            border: 1px solid rgba(154, 143, 168, 0.2);
+            border-radius: 4px;
+        }
+
+        .nav-links li a {
+            color: #808080;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+            font-size: 0.9rem;
+            letter-spacing: 0.05em;
+        }
+
+        .nav-links li a:hover,
+        .nav-links li a.active {
+            color: #9a8fa8;
+            background: rgba(154, 143, 168, 0.15);
+        }
+
         .nav-grid {
             grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
             gap: 20px;

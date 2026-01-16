@@ -5,33 +5,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ site_title }}</title>
-    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static stylesheet %}">
 </head>
 <body>
     <div class="container">
-        <h1 class="title">{{ site_title }}</h1>
-        <p style="text-align: center; color: #b8b8d1; margin-bottom: 2rem;">
-            <a href="{% url url_home %}" style="color: #b8b8d1; text-decoration: underline;">← Back to {{ system_home }}</a>
-        </p>
-
-        <nav class="nav-bar">
-            <ul class="nav-links">
-                <li><a href="{% url 'dnd_campaign' %}" class="active">Kampagnen</a></li>
-                <li><a href="{% url 'dnd_sessions' %}">Sessions</a></li>
-                <li><a href="{% url 'dnd_lore' %}">Lore</a></li>
-                <li><a href="{% url 'dnd_characters' %}">Charaktere</a></li>
-                <li><a href="{% url 'dnd_media' %}">Medien</a></li>
-                <li><a href="{% url 'dnd_search' %}">Suche</a></li>
-            </ul>
-        </nav>
+        {% include 'title_and_navbar.html' %}
 
         <div style="text-align: center; color: #e0e0e0; max-width: 800px; margin: 0 auto;">
-            <p style="font-size: 1.2rem; margin-bottom: 1.5rem;">
-                Campaign management and tracking.
-            </p>
-            <p style="font-style: italic; color: #b8b8d1;">
-                Content coming soon...
-            </p>
+            {% for item in episodes %}
+                <p>{{ title }} - {{ request.GET.campaign }} - Session {{ forloop.counter }}</p>
+                    <iframe
+                            width="560"
+                            height="315"
+                            src="{{ item }}"
+                            title="YouTube video player"
+                            frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope;
+                            picture-in-picture; web-share"
+                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+
+                    </iframe>
+            {% endfor %}
         </div>
     </div>
 </body>

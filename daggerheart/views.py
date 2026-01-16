@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from daggerheart.information.context_daggerheart import context
+from daggerheart.information.episodes_daggerheart import episodes_KdS
 from codexumbrae.auth_views import require_sessions_password
 
 def home(request):
@@ -14,7 +15,13 @@ def campaign(request):
 @require_sessions_password('daggerheart')
 def sessions(request):
     """Daggerheart sessions page."""
-    return render(request, 'systems_sessions.html', context=context)
+    campaign_id = request.GET.get('campaign')
+    if campaign_id == 'Kinder-des-Schleiers':
+        episodes = episodes_KdS
+    else:
+        episodes = []
+    return render(request, 'systems_sessions.html', context={**context, 'episodes': episodes,})
+
 
 def lore(request):
     """Daggerheart lore page."""

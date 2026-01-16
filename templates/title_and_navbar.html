@@ -1,0 +1,15 @@
+        <h1 class="title">{{ site_title }}</h1>
+        <p style="text-align: center; color: #b8b8d1; margin-bottom: 2rem;">
+            <a href="{% url url_home %}" style="color: #b8b8d1; text-decoration: underline;">← Back to {{ system_home }}</a>
+        </p>
+
+        <nav class="nav-bar">
+            <ul class="nav-links">
+                <li><a href="{% url url_campaign %}" class="active">Kampagnen</a></li>
+                <li><a href="{% url url_sessions %}">Sessions</a></li>
+                <li><a href="{% url url_lore %}">Lore</a></li>
+                <li><a href="{% url url_characters %}">Charaktere</a></li>
+                <li><a href="{% url url_media %}">Medien</a></li>
+                <li><a href="{% url url_search %}">Suche</a></li>
+            </ul>
+        </nav>

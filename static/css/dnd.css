@@ -76,6 +76,37 @@
             color: #ffd700;
         }
 
+        .nav-bar {
+            margin-bottom: 2rem;
+        }
+
+        .nav-links {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 0.5rem 1rem;
+            list-style: none;
+            padding: 1rem;
+            background: linear-gradient(135deg, rgba(27, 38, 59, 0.75) 0%, rgba(13, 27, 42, 0.75) 100%);
+            border: 2px solid rgba(184, 134, 11, 0.35);
+            border-radius: 10px;
+        }
+
+        .nav-links li a {
+            color: #c9ada7;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            border-radius: 6px;
+            transition: all 0.3s ease;
+            font-size: 0.95rem;
+        }
+
+        .nav-links li a:hover,
+        .nav-links li a.active {
+            color: #ffd700;
+            background: rgba(255, 215, 0, 0.15);
+        }
+
         .nav-grid {
             grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
             gap: 20px;
