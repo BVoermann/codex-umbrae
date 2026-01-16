@@ -12,12 +12,11 @@
         {% include 'title_and_navbar.html' %}
 
         <div style="text-align: center; color: #e0e0e0; max-width: 800px; margin: 0 auto;">
-            {% for item in episodes %}
-                <p>{{ title }} - {{ request.GET.campaign }} - Session {{ forloop.counter }}</p>
+                <p>{{ title }} - {{ request.GET.campaign }} - Session Playlist {{ forloop.counter }}</p>
                     <iframe
                             width="560"
                             height="315"
-                            src="{{ item }}"
+                            src="{{ playlist_url }}"
                             title="YouTube video player"
                             frameborder="0"
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope;
@@ -25,7 +24,6 @@
                             referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
 
                     </iframe>
-            {% endfor %}
         </div>
     </div>
 </body>
