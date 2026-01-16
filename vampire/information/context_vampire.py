@@ -1,6 +1,7 @@
 context = {
     'stylesheet': 'css/vampire.css',
     'campaign_cards': 'vampire/campaign_cards.html',
+    'media': 'vampire/medien.html',
     'site_title': 'Vampire: The Masquerade - Codex Umbrae',
     'title': 'Vampire: The Masquerade',
     'subtitle': "Enter the World of Darkness",

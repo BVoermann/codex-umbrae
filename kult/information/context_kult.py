@@ -1,6 +1,7 @@
 context = {
     'stylesheet': 'css/kult.css',
     'campaign_cards': 'kult/campaign_cards.html',
+    'media': 'kult/medien.html',
     'site_title': 'KULT - Codex Umbrae',
     'title': 'KULT',
     'subtitle': "Divinity Lost",

@@ -1,6 +1,7 @@
 context = {
     'stylesheet': 'css/daggerheart.css',
     'campaign_cards': 'daggerheart/campaign_cards.html',
+    'media': 'daggerheart/medien.html',
     'site_title': 'Daggerheart - Codex Umbrae',
     'title': 'Daggerheart',
     'subtitle': "Where Hope and Fear Collide",
