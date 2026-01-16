@@ -1,7 +1,12 @@
 context = {
     'stylesheet': 'css/kult.css',
     'campaign_cards': 'kult/campaign_cards.html',
+    'characters': 'kult/charaktere.html',
+    'campaign': 'kult/kampagnen.html',
+    'lore': 'kult/lore.html',
     'media': 'kult/medien.html',
+    'sessions': 'kult/sessions.html',
+    'search': 'kult/search.html',
     'site_title': 'KULT - Codex Umbrae',
     'title': 'KULT',
     'subtitle': "Divinity Lost",

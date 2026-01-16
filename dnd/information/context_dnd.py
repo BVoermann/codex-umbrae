@@ -1,7 +1,12 @@
 context = {
     'stylesheet': 'css/dnd.css',
     'campaign_cards': 'dnd/campaign_cards.html',
+    'characters': 'dnd/charaktere.html',
+    'campaign': 'dnd/kampagnen.html',
+    'lore': 'dnd/lore.html',
     'media': 'dnd/medien.html',
+    'sessions': 'dnd/sessions.html',
+    'search': 'dnd/search.html',
     'site_title': 'D&D - Codex Umbrae',
     'title': 'Dungeons & Dragons',
     'subtitle': "The World's Greatest Roleplaying Game",

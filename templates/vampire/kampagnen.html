@@ -11,17 +11,17 @@
     <div class="container">
         <h1 class="title">Vampire - Kampagnen</h1>
         <p style="text-align: center; color: #b8b8d1; margin-bottom: 2rem;">
-            <a href="{% url 'vampire' %}" style="color: #b8b8d1; text-decoration: underline;">← Back to Vampire Home</a>
+            <a href="{% url 'vampire_home' %}" style="color: #b8b8d1; text-decoration: underline;">← Back to Vampire Home</a>
         </p>
 
         <nav class="nav-bar">
             <ul class="nav-links">
-                <li><a href="{% url 'vampire_kampagnen' %}" class="active">Kampagnen</a></li>
+                <li><a href="{% url 'vampire_campaign' %}" class="active">Kampagnen</a></li>
                 <li><a href="{% url 'vampire_sessions' %}">Sessions</a></li>
                 <li><a href="{% url 'vampire_lore' %}">Lore</a></li>
-                <li><a href="{% url 'vampire_charaktere' %}">Charaktere</a></li>
-                <li><a href="{% url 'vampire_medien' %}">Medien</a></li>
-                <li><a href="{% url 'vampire_suche' %}">Suche</a></li>
+                <li><a href="{% url 'vampire_characters' %}">Charaktere</a></li>
+                <li><a href="{% url 'vampire_media' %}">Medien</a></li>
+                <li><a href="{% url 'vampire_search' %}">Suche</a></li>
             </ul>
         </nav>
 

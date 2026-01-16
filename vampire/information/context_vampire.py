@@ -1,7 +1,12 @@
 context = {
     'stylesheet': 'css/vampire.css',
     'campaign_cards': 'vampire/campaign_cards.html',
+    'characters': 'vampire/charaktere.html',
+    'campaign': 'vampire/kampagnen.html',
+    'lore': 'vampire/lore.html',
     'media': 'vampire/medien.html',
+    'sessions': 'vampire/sessions.html',
+    'search': 'vampire/search.html',
     'site_title': 'Vampire: The Masquerade - Codex Umbrae',
     'title': 'Vampire: The Masquerade',
     'subtitle': "Enter the World of Darkness",
