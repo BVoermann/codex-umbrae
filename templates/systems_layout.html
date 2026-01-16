@@ -76,6 +76,19 @@
               card.addEventListener('click', function() {
                   const campaignId = card.getAttribute('data-campaign-id');
 
+                  // Remove active class from all campaign cards
+                  campaignCards.forEach(function(c) {
+                      c.classList.remove('active');
+                  });
+
+                  // Add active class to clicked campaign card
+                  card.classList.add('active');
+
+                  // Update current URL with campaign parameter (without reload)
+                  const currentUrl = new URL(window.location.href);
+                  currentUrl.searchParams.set('campaign', campaignId);
+                  history.replaceState(null, '', currentUrl.toString());
+
                   // Update all links in campaign-grid to include campaign parameter
                   campaignGridLinks.forEach(function(link) {
                       const url = new URL(link.href);
@@ -87,6 +100,25 @@
                   campaignGrid.classList.add('visible');
               });
           });
+
+          // On page load, check if campaign parameter exists and activate the matching card
+          const urlParams = new URLSearchParams(window.location.search);
+          const activeCampaign = urlParams.get('campaign');
+          if (activeCampaign) {
+              campaignCards.forEach(function(card) {
+                  if (card.getAttribute('data-campaign-id') === activeCampaign) {
+                      card.classList.add('active');
+                      campaignGrid.classList.add('visible');
+
+                      // Update links with campaign parameter
+                      campaignGridLinks.forEach(function(link) {
+                          const url = new URL(link.href);
+                          url.searchParams.set('campaign', activeCampaign);
+                          link.href = url.toString();
+                      });
+                  }
+              });
+          }
       });
   </script>
 </body>

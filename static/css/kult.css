@@ -189,6 +189,12 @@
             box-shadow: 0 8px 24px rgba(154, 143, 168, 0.2);
         }
 
+        .campaign.active {
+            background: rgba(20, 20, 28, 0.9);
+            border-color: rgba(154, 143, 168, 0.6);
+            box-shadow: 0 8px 24px rgba(154, 143, 168, 0.3), inset 0 0 20px rgba(154, 143, 168, 0.1);
+        }
+
         .nav-card h2 {
             color: #b8b8b8;
             font-size: 1.3rem;
