@@ -6,7 +6,7 @@ context = {
     'lore': 'daggerheart/lore.html',
     'media': 'daggerheart/medien.html',
     'sessions': 'daggerheart/sessions.html',
-    'search': 'daggerheart/search.html',
+    'search': 'daggerheart/suche.html',
     'site_title': 'Daggerheart - Codex Umbrae',
     'title': 'Daggerheart',
     'subtitle': "Where Hope and Fear Collide",

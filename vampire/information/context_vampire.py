@@ -6,7 +6,7 @@ context = {
     'lore': 'vampire/lore.html',
     'media': 'vampire/medien.html',
     'sessions': 'vampire/sessions.html',
-    'search': 'vampire/search.html',
+    'search': 'vampire/suche.html',
     'site_title': 'Vampire: The Masquerade - Codex Umbrae',
     'title': 'Vampire: The Masquerade',
     'subtitle': "Enter the World of Darkness",

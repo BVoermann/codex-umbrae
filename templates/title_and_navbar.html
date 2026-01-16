@@ -1,15 +1,15 @@
         <h1 class="title">{{ site_title }}</h1>
         <p style="text-align: center; color: #b8b8d1; margin-bottom: 2rem;">
-            <a href="{% url url_home %}" style="color: #b8b8d1; text-decoration: underline;">← Back to {{ system_home }}</a>
+            <a href="{% url url_home %}{% if request.GET.campaign %}?campaign={{ request.GET.campaign }}{% endif %}" style="color: #b8b8d1; text-decoration: underline;">← Back to {{ system_home }}</a>
         </p>
 
         <nav class="nav-bar">
             <ul class="nav-links">
-                <li><a href="{% url url_campaign %}" class="active">Kampagnen</a></li>
-                <li><a href="{% url url_sessions %}">Sessions</a></li>
-                <li><a href="{% url url_lore %}">Lore</a></li>
-                <li><a href="{% url url_characters %}">Charaktere</a></li>
-                <li><a href="{% url url_media %}">Medien</a></li>
-                <li><a href="{% url url_search %}">Suche</a></li>
+                <li><a href="{% url url_campaign %}{% if request.GET.campaign %}?campaign={{ request.GET.campaign }}{% endif %}" class="active">Kampagnen</a></li>
+                <li><a href="{% url url_sessions %}{% if request.GET.campaign %}?campaign={{ request.GET.campaign }}{% endif %}">Sessions</a></li>
+                <li><a href="{% url url_lore %}{% if request.GET.campaign %}?campaign={{ request.GET.campaign }}{% endif %}">Lore</a></li>
+                <li><a href="{% url url_characters %}{% if request.GET.campaign %}?campaign={{ request.GET.campaign }}{% endif %}">Charaktere</a></li>
+                <li><a href="{% url url_media %}{% if request.GET.campaign %}?campaign={{ request.GET.campaign }}{% endif %}">Medien</a></li>
+                <li><a href="{% url url_search %}{% if request.GET.campaign %}?campaign={{ request.GET.campaign }}{% endif %}">Suche</a></li>
             </ul>
         </nav>

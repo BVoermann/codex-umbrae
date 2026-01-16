@@ -6,7 +6,7 @@ context = {
     'lore': 'kult/lore.html',
     'media': 'kult/medien.html',
     'sessions': 'kult/sessions.html',
-    'search': 'kult/search.html',
+    'search': 'kult/suche.html',
     'site_title': 'KULT - Codex Umbrae',
     'title': 'KULT',
     'subtitle': "Divinity Lost",

@@ -6,7 +6,7 @@ context = {
     'lore': 'dnd/lore.html',
     'media': 'dnd/medien.html',
     'sessions': 'dnd/sessions.html',
-    'search': 'dnd/search.html',
+    'search': 'dnd/suche.html',
     'site_title': 'D&D - Codex Umbrae',
     'title': 'Dungeons & Dragons',
     'subtitle': "The World's Greatest Roleplaying Game",
