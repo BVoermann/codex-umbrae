@@ -34,11 +34,3 @@ def lore(request):
 def characters(request):
     """D&D characters page."""
     return render(request, 'systems_characters.html', context=context)
-
-def media(request):
-    """D&D media page."""
-    return render(request, 'systems_media.html', context=context)
-
-def search(request):
-    """D&D search page."""
-    return render(request, 'systems_search.html', context=context)

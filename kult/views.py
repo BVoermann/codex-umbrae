@@ -29,11 +29,3 @@ def lore(request):
 def characters(request):
     """KULT characters page."""
     return render(request, 'systems_characters.html', context=context)
-
-def media(request):
-    """KULT media page."""
-    return render(request, 'systems_media.html', context=context)
-
-def search(request):
-    """KULT search page."""
-    return render(request, 'systems_search.html', context=context)

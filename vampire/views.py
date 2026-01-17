@@ -31,11 +31,3 @@ def lore(request):
 def characters(request):
     """Vampire characters page."""
     return render(request, 'systems_characters.html', context=context)
-
-def media(request):
-    """Vampire media page."""
-    return render(request, 'systems_media.html', context=context)
-
-def search(request):
-    """Vampire search page."""
-    return render(request, 'systems_search.html', context=context)
