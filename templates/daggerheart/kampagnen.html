@@ -5,14 +5,29 @@
 </head>
 <body>
     <div class="container">
-
         <div style="text-align: center; color: #e0e0e0; max-width: 800px; margin: 0 auto;">
-            <p style="font-size: 1.2rem; margin-bottom: 1.5rem;">
-                Campaign management and tracking.
-            </p>
-            <p style="font-style: italic; color: #b8b8d1;">
-                Content coming soon...
-            </p>
+            {% if request.GET.campaign == "Kinder-des-Schleiers" %}
+                Name der Kampagne: Kinder des Schleiers
+
+                Zusammenfassung: Tief im Land Faylopia auf dem kontinentalen Nirada liegt das Dorf Flohall.
+                Dieses Dorf ist eine Oase in einem Wald, der durch Fey-Magie zu einem chaotischen Reich mutiert ist.
+                Die drei Charaktere müssen sich zwischen Natur und Zerstörung, sowie zwischen Gottheiten entscheiden.
+
+                Anzahl der gespielten Sessions: 4
+
+                Status: Beendet
+
+                Charaktere:
+                Ancey, gespielt von Nipah
+                Anhedonia, gespielt von Jule
+                Jav, gespielt von Max
+
+                Wenn du das Passwort hast, um auf die Sessions zuzugreifen, kannst du das
+                <a href="{% url 'daggerheart_sessions' %}">hier</a> tun.
+
+                Weitere Informationen zu der Welt Nirada, in der die Kampagne spielt, bekommst du
+                <a href="{% url 'daggerheart_lore' %}">hier</a>.
+            {% endif %}
         </div>
     </div>
 </body>

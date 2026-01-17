@@ -5,14 +5,29 @@
 </head>
 <body>
     <div class="container">
-
         <div style="text-align: center; color: #e0e0e0; max-width: 800px; margin: 0 auto;">
-            <p style="font-size: 1.2rem; margin-bottom: 1.5rem;">
-                Campaign management and tracking.
-            </p>
-            <p style="font-style: italic; color: #b8b8d1;">
-                Content coming soon...
-            </p>
+            {% if request.GET.campaign == "Ordo-Orbis-Dei" %}
+                Name der Kampagne: Ordo Orbis Dei
+
+                Zusammenfassung: Diese Kampagne spielt in Edinburgh, Schottland. Dort finden sich, durch seltsame
+                Umstände, drei Menschen aus den unterschiedlichsten Lebensrealitäten zusammen. Im Zuge der
+                Kampagne stoßen sie auf Traumwelten, Halluzinationen und die zwielichtige Unterwelt.
+
+                Anzahl der gespielten Sessions: 4
+
+                Status: Beendet
+
+                Charaktere:
+                Joanne Taylor, gespielt von Nipah
+                Damian Crane, gespielt von Erik
+                Harry McTannen, gespielt von Stevie
+
+                Wenn du das Passwort hast, um auf die Sessions zuzugreifen, kannst du das
+                <a href="{% url 'kult_sessions' %}">hier</a> tun.
+
+                Weitere Informationen zu der Welt von Kult bekommst du
+                <a href="{% url 'kult_lore' %}">hier</a>.
+            {% endif %}
         </div>
     </div>
 </body>

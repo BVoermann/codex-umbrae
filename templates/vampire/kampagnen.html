@@ -5,14 +5,52 @@
 </head>
 <body>
     <div class="container">
-
         <div style="text-align: center; color: #e0e0e0; max-width: 800px; margin: 0 auto;">
-            <p style="font-size: 1.2rem; margin-bottom: 1.5rem;">
-                Campaign management and tracking.
-            </p>
-            <p style="font-style: italic; color: #b8b8d1;">
-                Content coming soon...
-            </p>
+            {% if request.GET.campaign == "Berlin-By-Night-Camarilla" %}
+                Name der Kampagne: Berlin By Night - Camarilla
+
+                Zusammenfassung: In dieser Kampagne kommen vier Camarilla-Vampire zusammen, um den Willen des
+                Prinzen zu erfüllen, sich gegenseitig kennenzulernen, ihre Sire zu enttäuschen oder auch zu beglücken
+                und Verschwörungen von dem Sabbath und der zweiten Inquisition aufzuspüren.
+
+                Anzahl der gespielten Sessions: 14
+
+                Status: Beendet
+
+                Charaktere:
+                Esmée van de Velden, gespielt von Layla
+                Kiara Fink, gespielt von Jule
+                Joanne Taylor, gespielt von Nipah
+                Nicolae Dragulescu, gespielt von Daniel
+
+                Wenn du das Passwort hast, um auf die Sessions zuzugreifen, kannst du das
+                <a href="{% url 'vampire_sessions' %}">hier</a> tun.
+
+                Weitere Informationen zu der World of Darkness bekommst du
+                <a href="{% url 'vampire_lore' %}">hier</a>.
+            {% endif %}
+            {% if request.GET.campaign == "Berlin-By-Night-Anarchs" %}
+                Name der Kampagne: Berlin By Night - Anarchs
+
+                Zusammenfassung: In diesem Spin-Off versuchen drei Anarch-Vampire sich in der, von der Camarilla
+                bestimmten, Stadt zu behaupten. In dieser Zeit treffen sie auf neue Feinde, alte Freunde und
+                erledigen wichtige Aufgaben für ihre Seite.
+
+                Anzahl der gespielten Sessions: 6
+
+                Status: Beendet
+
+                Charaktere:
+                Celine Senger, gespielt von Jule
+                Melanie Tomko, gespielt von Nipah
+                Rebecca, gespielt von Layla
+
+                Wenn du das Passwort hast, um auf die Sessions zuzugreifen, kannst du das
+                <a href="{% url 'vampire_sessions' %}">hier</a> tun.
+
+                Weitere Informationen zu der World of Darkness bekommst du
+                <a href="{% url 'vampire_lore' %}">hier</a>.
+            {% endif %}
         </div>
     </div>
 </body>
