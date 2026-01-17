@@ -9,7 +9,5 @@
                 <li><a href="{% url url_sessions %}{% if request.GET.campaign %}?campaign={{ request.GET.campaign }}{% endif %}">Sessions</a></li>
                 <li><a href="{% url url_lore %}{% if request.GET.campaign %}?campaign={{ request.GET.campaign }}{% endif %}">Lore</a></li>
                 <li><a href="{% url url_characters %}{% if request.GET.campaign %}?campaign={{ request.GET.campaign }}{% endif %}">Charaktere</a></li>
-                <li><a href="{% url url_media %}{% if request.GET.campaign %}?campaign={{ request.GET.campaign }}{% endif %}">Medien</a></li>
-                <li><a href="{% url url_search %}{% if request.GET.campaign %}?campaign={{ request.GET.campaign }}{% endif %}">Suche</a></li>
             </ul>
         </nav>
