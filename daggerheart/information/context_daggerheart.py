@@ -5,7 +5,7 @@ context = {
     'campaign': 'daggerheart/kampagnen.html',
     'lore': 'daggerheart/lore.html',
     'sessions': 'daggerheart/sessions.html',
-    'site_title': 'Daggerheart - Codex Umbrae',
+    'site_title': 'Daggerheart',
     'title': 'Daggerheart',
     'subtitle': "Where Hope and Fear Collide",
     'welcome': 'In a world of magic and peril, heroes rise to face impossible odds. '

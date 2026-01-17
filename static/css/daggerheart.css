@@ -290,6 +290,116 @@
             color: #ffd700;
         }
 
+        .campaign-info {
+            background: linear-gradient(135deg, rgba(58, 28, 94, 0.7) 0%, rgba(42, 13, 74, 0.7) 100%);
+            border: 2px solid rgba(218, 165, 32, 0.3);
+            border-radius: 10px;
+            padding: 2rem;
+            margin: 1.5rem 0;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+            text-align: left;
+        }
+
+        .campaign-info h2 {
+            color: #daa520;
+            font-size: 1.6rem;
+            margin-bottom: 1.5rem;
+            text-align: center;
+            letter-spacing: 0.08em;
+            text-shadow: 0 0 20px rgba(218, 165, 32, 0.4);
+        }
+
+        .campaign-info h3 {
+            color: #c4b0d4;
+            font-size: 1.1rem;
+            margin: 1.2rem 0 0.5rem;
+            font-weight: 600;
+            letter-spacing: 0.03em;
+        }
+
+        .campaign-info p {
+            color: #d8d8d8;
+            line-height: 1.7;
+            margin-bottom: 0.5rem;
+        }
+
+        .campaign-info .status {
+            display: inline-block;
+            padding: 0.3rem 0.8rem;
+            border-radius: 4px;
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+
+        .campaign-info .status.beendet {
+            background: rgba(40, 167, 69, 0.2);
+            color: #5cb85c;
+            border: 1px solid rgba(40, 167, 69, 0.4);
+        }
+
+        .campaign-info .status.pausiert {
+            background: rgba(255, 193, 7, 0.2);
+            color: #f0ad4e;
+            border: 1px solid rgba(255, 193, 7, 0.4);
+        }
+
+        .campaign-info .status.aktiv {
+            background: rgba(0, 123, 255, 0.2);
+            color: #5bc0de;
+            border: 1px solid rgba(0, 123, 255, 0.4);
+        }
+
+        .campaign-info ul {
+            list-style: none;
+            padding: 0;
+            margin: 0.5rem 0;
+        }
+
+        .campaign-info ul li {
+            color: #d8d8d8;
+            padding: 0.4rem 0;
+            padding-left: 1.2rem;
+            position: relative;
+        }
+
+        .campaign-info ul li::before {
+            content: '✦';
+            position: absolute;
+            left: 0;
+            color: #daa520;
+            font-size: 0.7rem;
+        }
+
+        .campaign-info .player-name {
+            color: #b8a8c8;
+            font-style: italic;
+        }
+
+        .campaign-info .links {
+            margin-top: 1.5rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid rgba(218, 165, 32, 0.3);
+            text-align: center;
+        }
+
+        .campaign-info .links a {
+            color: #daa520;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            border: 2px solid rgba(218, 165, 32, 0.4);
+            border-radius: 6px;
+            margin: 0 0.5rem;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+
+        .campaign-info .links a:hover {
+            background: rgba(218, 165, 32, 0.2);
+            border-color: rgba(218, 165, 32, 0.7);
+            box-shadow: 0 0 15px rgba(218, 165, 32, 0.3);
+            color: #ffd700;
+        }
+
         @media (max-width: 768px) {
             .title {
                 font-size: 2.2rem;

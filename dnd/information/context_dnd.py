@@ -6,7 +6,7 @@ context = {
     'lore': 'dnd/lore.html',
     'media': 'dnd/medien.html',
     'sessions': 'dnd/sessions.html',
-    'site_title': 'D&D - Codex Umbrae',
+    'site_title': 'Dungeons and Dragons',
     'title': 'Dungeons & Dragons',
     'subtitle': "The World's Greatest Roleplaying Game",
     'welcome': 'Gather your party and venture forth into realms of magic, mystery, and endless adventure. '

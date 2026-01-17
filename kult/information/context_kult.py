@@ -5,7 +5,7 @@ context = {
     'campaign': 'kult/kampagnen.html',
     'lore': 'kult/lore.html',
     'sessions': 'kult/sessions.html',
-    'site_title': 'KULT - Codex Umbrae',
+    'site_title': 'KULT',
     'title': 'KULT',
     'subtitle': "Divinity Lost",
     'welcome': 'Beyond the veil of reality lies the truth of our prison. '

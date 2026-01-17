@@ -5,7 +5,7 @@ context = {
     'campaign': 'vampire/kampagnen.html',
     'lore': 'vampire/lore.html',
     'sessions': 'vampire/sessions.html',
-    'site_title': 'Vampire: The Masquerade - Codex Umbrae',
+    'site_title': 'Vampire: The Masquerade',
     'title': 'Vampire: The Masquerade',
     'subtitle': "Enter the World of Darkness",
     'welcome': 'Welcome to the shadows, where immortal predators walk among mortals, '

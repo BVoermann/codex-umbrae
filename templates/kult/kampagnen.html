@@ -5,28 +5,23 @@
 </head>
 <body>
     <div class="container">
-        <div style="text-align: center; color: #e0e0e0; max-width: 800px; margin: 0 auto;">
+        <div style="max-width: 800px; margin: 0 auto;">
             {% if request.GET.campaign == "Ordo-Orbis-Dei" %}
-                Name der Kampagne: Ordo Orbis Dei
-
-                Zusammenfassung: Diese Kampagne spielt in Edinburgh, Schottland. Dort finden sich, durch seltsame
-                Umstände, drei Menschen aus den unterschiedlichsten Lebensrealitäten zusammen. Im Zuge der
-                Kampagne stoßen sie auf Traumwelten, Halluzinationen und die zwielichtige Unterwelt.
-
-                Anzahl der gespielten Sessions: 4
-
-                Status: Beendet
-
-                Charaktere:
-                Joanne Taylor, gespielt von Nipah
-                Damian Crane, gespielt von Erik
-                Harry McTannen, gespielt von Stevie
-
-                Wenn du das Passwort hast, um auf die Sessions zuzugreifen, kannst du das
-                <a href="{% url 'kult_sessions' %}">hier</a> tun.
-
-                Weitere Informationen zu der Welt von Kult bekommst du
-                <a href="{% url 'kult_lore' %}">hier</a>.
+            <div class="campaign-info">
+                <h2>Ordo Orbis Dei</h2>
+                <h3>Zusammenfassung</h3>
+                <p>Diese Kampagne spielt in Edinburgh, Schottland. Dort finden sich, durch seltsame Umstände, drei Menschen aus den unterschiedlichsten Lebensrealitäten zusammen. Im Zuge der Kampagne stoßen sie auf Traumwelten, Halluzinationen und die zwielichtige Unterwelt.</p>
+                <h3>Sessions</h3>
+                <p>4 gespielte Sessions</p>
+                <h3>Status</h3>
+                <p><span class="status beendet">Beendet</span></p>
+                <h3>Charaktere</h3>
+                <ul>
+                    <li>Joanne Taylor <span class="player-name">— gespielt von Nipah</span></li>
+                    <li>Damian Crane <span class="player-name">— gespielt von Erik</span></li>
+                    <li>Harry McTannen <span class="player-name">— gespielt von Stevie</span></li>
+                </ul>
+            </div>
             {% endif %}
         </div>
     </div>

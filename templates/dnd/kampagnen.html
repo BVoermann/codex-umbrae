@@ -5,80 +5,65 @@
 </head>
 <body>
     <div class="container">
-        <div style="text-align: center; color: #e0e0e0; max-width: 800px; margin: 0 auto;">
+        <div style="max-width: 800px; margin: 0 auto;">
             {% if request.GET.campaign == "Der-unermessliche-Zerfall" %}
-                Name der Kampagne: Der unermessliche Zerfall
-
-                Zusammenfassung: In der Stadt Ajas Bastion, im Norden von Loreth, findet sich eine Gruppe von
-                Abenteurern eines Abends in einer Taverne zusammen. Gemeinsam lösen sie das Rätsel um eine
-                geheimnisvolle Droge, die Personen in traumähnliche Zustände versetzt.
-
-                Anzahl der gespielten Sessions: 11
-
-                Status: Beendet
-
-                Charaktere:
-                Cithara von der Vogelweide, gespielt von Layla
-                Morrigan Windblüte, gespielt von Jule
-                Dith'orak Deeseng, gespielt von Dito
-                S'Nur'Ahr, gespielt von Etilane
-                Etilos Lölicus von und zu Ticenstein, gespielt von Tice
-
-                Wenn du das Passwort hast, um auf die Sessions zuzugreifen, kannst du das
-                <a href="{% url 'dnd_sessions' %}">hier</a> tun.
-
-                Weitere Informationen zu der Welt Nirada, in der die Kampagne spielt, bekommst du
-                <a href="{% url 'dnd_lore' %}">hier</a>.
+            <div class="campaign-info">
+                <h2>Der unermessliche Zerfall</h2>
+                <h3>Zusammenfassung</h3>
+                <p>In der Stadt Ajas Bastion, im Norden von Loreth, findet sich eine Gruppe von Abenteurern eines Abends in einer Taverne zusammen. Gemeinsam lösen sie das Rätsel um eine geheimnisvolle Droge, die Personen in traumähnliche Zustände versetzt.</p>
+                <h3>Sessions</h3>
+                <p>11 gespielte Sessions</p>
+                <h3>Status</h3>
+                <p><span class="status beendet">Beendet</span></p>
+                <h3>Charaktere</h3>
+                <ul>
+                    <li>Cithara von der Vogelweide <span class="player-name">— gespielt von Layla</span></li>
+                    <li>Morrigan Windblüte <span class="player-name">— gespielt von Jule</span></li>
+                    <li>Dith'orak Deeseng <span class="player-name">— gespielt von Dito</span></li>
+                    <li>S'Nur'Ahr <span class="player-name">— gespielt von Etilane</span></li>
+                    <li>Etilos Lölicus von und zu Ticenstein <span class="player-name">— gespielt von Tice</span></li>
+                </ul>
+            </div>
             {% endif %}
             {% if request.GET.campaign == "Das-Geheimnis-von-Dyadan" %}
-                Name der Kampagne: Das Geheimnis von Dyadan
-
-                Zusammenfassung: Im Wald Dyadan, im süd-westlichen Teil von Loreth, treffen sich sehr verschiedene
-                Personen, die gemeinsam ein Abenteuer erleben. Von einem Ork-Stamm über einen Adligen bis
-                zu einem Erz-Fey manövrieren sie sich in die eigenartigsten Situationen.
-
-                Anzahl der gespielten Sessions: 9
-
-                Status: Beendet
-
-                Charaktere:
-                Cithara von der Vogelweide, gespielt von Layla
-                Morrigan Windblüte, gespielt von Jule
-                Sneeks, gespielt von Orcjay
-                Chronofell, gespielt von Misaki
-                Brombur Klauth, gespielt von Bardehaus
-                Gwairan (bis Session 5), gespielt von Foobuntu / Amelia Eisenherz (ab Session 6), gespielt von CozyKoakuma
-
-                Wenn du das Passwort hast, um auf die Sessions zuzugreifen, kannst du das
-                <a href="{% url 'dnd_sessions' %}">hier</a> tun.
-
-                Weitere Informationen zu der Welt Nirada, in der die Kampagne spielt, bekommst du
-                <a href="{% url 'dnd_lore' %}">hier</a>.
+            <div class="campaign-info">
+                <h2>Das Geheimnis von Dyadan</h2>
+                <h3>Zusammenfassung</h3>
+                <p>Im Wald Dyadan, im süd-westlichen Teil von Loreth, treffen sich sehr verschiedene Personen, die gemeinsam ein Abenteuer erleben. Von einem Ork-Stamm über einen Adligen bis zu einem Erz-Fey manövrieren sie sich in die eigenartigsten Situationen.</p>
+                <h3>Sessions</h3>
+                <p>9 gespielte Sessions</p>
+                <h3>Status</h3>
+                <p><span class="status beendet">Beendet</span></p>
+                <h3>Charaktere</h3>
+                <ul>
+                    <li>Cithara von der Vogelweide <span class="player-name">— gespielt von Layla</span></li>
+                    <li>Morrigan Windblüte <span class="player-name">— gespielt von Jule</span></li>
+                    <li>Sneeks <span class="player-name">— gespielt von Orcjay</span></li>
+                    <li>Chronofell <span class="player-name">— gespielt von Misaki</span></li>
+                    <li>Brombur Klauth <span class="player-name">— gespielt von Bardehaus</span></li>
+                    <li>Gwairan (bis Session 5) <span class="player-name">— gespielt von Foobuntu</span> / Amelia Eisenherz (ab Session 6) <span class="player-name">— gespielt von CozyKoakuma</span></li>
+                </ul>
+            </div>
             {% endif %}
             {% if request.GET.campaign == "Unbekannte-Heimat" %}
-                Name der Kampagne: Unbekannte Heimat
-
-                Zusammenfassung: Südlich des Kontinents, auf einem Schiff im Adamo-Archipel, segeln die Abenteurer als
-                verkappte Piratencrew von Insel zu Insel und entdecken allerlei verschiedene Kulturen,
-                Personen und lösen die unterschiedlichsten Rätsel.
-
-                Anzahl der gespielten Sessions: 27
-
-                Status: Pausiert
-
-                Charaktere:
-                Gino, gespielt von Dito
-                Isolde, gespielt von Etilane
-                Kimberlee Kupferschuppe, gespielt von Layla
-                Ophelia Ula, gespielt von CozyKoakuma
-                Aegis, gespielt von Jule
-                Calypso Farrai, gespielt von Tice
-
-                Wenn du das Passwort hast, um auf die Sessions zuzugreifen, kannst du das
-                <a href="{% url 'dnd_sessions' %}">hier</a> tun.
-
-                Weitere Informationen zu der Welt Nirada, in der die Kampagne spielt, bekommst du
-                <a href="{% url 'dnd_lore' %}">hier</a>.
+            <div class="campaign-info">
+                <h2>Unbekannte Heimat</h2>
+                <h3>Zusammenfassung</h3>
+                <p>Südlich des Kontinents, auf einem Schiff im Adamo-Archipel, segeln die Abenteurer als verkappte Piratencrew von Insel zu Insel und entdecken allerlei verschiedene Kulturen, Personen und lösen die unterschiedlichsten Rätsel.</p>
+                <h3>Sessions</h3>
+                <p>27 gespielte Sessions</p>
+                <h3>Status</h3>
+                <p><span class="status pausiert">Pausiert</span></p>
+                <h3>Charaktere</h3>
+                <ul>
+                    <li>Gino <span class="player-name">— gespielt von Dito</span></li>
+                    <li>Isolde <span class="player-name">— gespielt von Etilane</span></li>
+                    <li>Kimberlee Kupferschuppe <span class="player-name">— gespielt von Layla</span></li>
+                    <li>Ophelia Ula <span class="player-name">— gespielt von CozyKoakuma</span></li>
+                    <li>Aegis <span class="player-name">— gespielt von Jule</span></li>
+                    <li>Calypso Farrai <span class="player-name">— gespielt von Tice</span></li>
+                </ul>
+            </div>
             {% endif %}
         </div>
     </div>
