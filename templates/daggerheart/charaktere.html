@@ -6,20 +6,24 @@
 </head>
 <body>
     <div class="container">
-        <div style="text-align: center; color: #e0e0e0; max-width: 800px; margin: 0 auto;">
-            <p style="font-size: 1.2rem; margin-bottom: 1.5rem;">
+        <div class="characters-container">
             {% if request.GET.campaign == "Kinder-des-Schleiers" %}
-                Ancey
-                <img src="{% static 'pictures/daggerheart/Kinder_des_Schleiers/Ancey.webp' %}" height="50%" width="50%">
-                <img src="{% static 'sheets/daggerheart/Kinder_des_Schleiers/Ancey_Sheet.jpg' %}" height="600px" width="100%">
-                Anhedonia
-                <img src="{% static 'pictures/daggerheart/Kinder_des_Schleiers/Anhedonia.webp' %}" height="50%" width="50%">
-                <img src="{% static 'sheets/daggerheart/Kinder_des_Schleiers/Anhedonia_Sheet.jpg' %}" height="600px" width="100%">
-                Jav
-                <img src="{% static "pictures/daggerheart/Kinder_des_Schleiers/Jav.png" %}" height="50%" width="50%">
-                <img src="{% static "sheets/daggerheart/Kinder_des_Schleiers/Jav_Sheet.jpg" %}" height="600px" width="100%">
+            <div class="character-card">
+                <h2>Ancey</h2>
+                <img src="{% static 'pictures/daggerheart/Kinder_des_Schleiers/Ancey.webp' %}" class="character-portrait" alt="Ancey">
+                <img src="{% static 'sheets/daggerheart/Kinder_des_Schleiers/Ancey_Sheet.jpg' %}" class="character-sheet-img" alt="Ancey Sheet">
+            </div>
+            <div class="character-card">
+                <h2>Anhedonia</h2>
+                <img src="{% static 'pictures/daggerheart/Kinder_des_Schleiers/Anhedonia.webp' %}" class="character-portrait" alt="Anhedonia">
+                <img src="{% static 'sheets/daggerheart/Kinder_des_Schleiers/Anhedonia_Sheet.jpg' %}" class="character-sheet-img" alt="Anhedonia Sheet">
+            </div>
+            <div class="character-card">
+                <h2>Jav</h2>
+                <img src="{% static "pictures/daggerheart/Kinder_des_Schleiers/Jav.png" %}" class="character-portrait" alt="Jav">
+                <img src="{% static "sheets/daggerheart/Kinder_des_Schleiers/Jav_Sheet.jpg" %}" class="character-sheet-img" alt="Jav Sheet">
+            </div>
             {% endif %}
-            </p>
         </div>
     </div>
 </body>

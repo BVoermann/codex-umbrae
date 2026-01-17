@@ -6,38 +6,49 @@
 </head>
 <body>
     <div class="container">
-        <div style="text-align: center; color: #e0e0e0; max-width: 800px; margin: 0 auto;">
-            <p style="font-style: italic; color: #b8b8d1;">
+        <div class="characters-container">
             {% if request.GET.campaign == "Berlin-By-Night-Camarilla" %}
-                Esmée van de Velden
-                <img src="{% static 'pictures/vampire/BBNC/Esmee.jpg' %}" height="50%" width="50%">
-                <iframe src="{% static 'sheets/vampire/BBNC/Esmee.pdf' %}" height="600px" width="100%">
-                </iframe>
-                <img src="{% static 'pictures/vampire/BBNC/Kiara.png' %}" height="50%" width="50%">
-                <iframe src="{% static 'sheets/vampire/BBNC/Kiara.pdf' %}" height="600px" width="100%">
-                </iframe>
-                <img src="{% static 'pictures/vampire/BBNC/Octavian.webp' %}" height="50%" width="50%">
-                <iframe src="{% static 'sheets/vampire/BBNC/Octavian.pdf' %}" height="600px" width="100%">
-                </iframe>
-                <img src="{% static 'pictures/vampire/BBNC/Nicolae.webp' %}" height="50%" width="50%">
-                <iframe src="{% static 'sheets/vampire/BBNC/Nicolae.pdf' %}" height="600px" width="100%">
-                </iframe>
-                <img src="{% static 'pictures/vampire/BBNC/Group.png' %}" height="50%" width="50%">
+            <div class="character-card">
+                <h2>Esmée van de Velden</h2>
+                <img src="{% static 'pictures/vampire/BBNC/Esmee.jpg' %}" class="character-portrait" alt="Esmée">
+                <iframe src="{% static 'sheets/vampire/BBNC/Esmee.pdf' %}" class="character-sheet"></iframe>
+            </div>
+            <div class="character-card">
+                <h2>Kiara Fink</h2>
+                <img src="{% static 'pictures/vampire/BBNC/Kiara.png' %}" class="character-portrait" alt="Kiara">
+                <iframe src="{% static 'sheets/vampire/BBNC/Kiara.pdf' %}" class="character-sheet"></iframe>
+            </div>
+            <div class="character-card">
+                <h2>Octavian Manolas</h2>
+                <img src="{% static 'pictures/vampire/BBNC/Octavian.webp' %}" class="character-portrait" alt="Octavian">
+                <iframe src="{% static 'sheets/vampire/BBNC/Octavian.pdf' %}" class="character-sheet"></iframe>
+            </div>
+            <div class="character-card">
+                <h2>Nicolae Dragulescu</h2>
+                <img src="{% static 'pictures/vampire/BBNC/Nicolae.webp' %}" class="character-portrait" alt="Nicolae">
+                <iframe src="{% static 'sheets/vampire/BBNC/Nicolae.pdf' %}" class="character-sheet"></iframe>
+            </div>
+            <img src="{% static 'pictures/vampire/BBNC/Group.png' %}" class="group-image" alt="Group">
             {% endif %}
 
             {% if request.GET.campaign == "Berlin-By-Night-Anarchs" %}
-                <img src="{% static 'pictures/vampire/BBNA/Celine.png' %}" height="50%" width="50%">
-                <iframe src="{% static 'sheets/vampire/BBNA/Celine.pdf' %}" height="600px" width="100%">
-                </iframe>
-                <img src="{% static 'pictures/vampire/BBNA/Melanie.png' %}" height="50%" width="50%">
-                <iframe src="{% static 'sheets/vampire/BBNA/Melanie.pdf' %}" height="600px" width="100%">
-                </iframe>
-                <img src="{% static 'pictures/vampire/BBNA/Rebecca.png' %}" height="50%" width="50%">
-                <iframe src="{% static 'sheets/vampire/BBNA/Rebekkah.pdf' %}" height="600px" width="100%">
-                </iframe>
-                <img src="{% static 'pictures/vampire/BBNA/Group.png' %}" height="50%" width="50%">
+            <div class="character-card">
+                <h2>Celine Senger</h2>
+                <img src="{% static 'pictures/vampire/BBNA/Celine.png' %}" class="character-portrait" alt="Celine">
+                <iframe src="{% static 'sheets/vampire/BBNA/Celine.pdf' %}" class="character-sheet"></iframe>
+            </div>
+            <div class="character-card">
+                <h2>Melanie Tomko</h2>
+                <img src="{% static 'pictures/vampire/BBNA/Melanie.png' %}" class="character-portrait" alt="Melanie">
+                <iframe src="{% static 'sheets/vampire/BBNA/Melanie.pdf' %}" class="character-sheet"></iframe>
+            </div>
+            <div class="character-card">
+                <h2>Rebecca</h2>
+                <img src="{% static 'pictures/vampire/BBNA/Rebecca.png' %}" class="character-portrait" alt="Rebecca">
+                <iframe src="{% static 'sheets/vampire/BBNA/Rebekkah.pdf' %}" class="character-sheet"></iframe>
+            </div>
+            <img src="{% static 'pictures/vampire/BBNA/Group.png' %}" class="group-image" alt="Group">
             {% endif %}
-            </p>
         </div>
     </div>
 </body>
