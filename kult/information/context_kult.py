@@ -10,7 +10,19 @@ context = {
     'subtitle': "Divinity Lost",
     'welcome': 'Beyond the veil of reality lies the truth of our prison. '
                'The illusion fractures. The metropolis bleeds.',
-    'quote': '"We are but fragments of forgotten gods, wandering the labyrinth of lies."',
+    'quote': [
+        '"We are but fragments of forgotten gods, wandering the labyrinth of lies."',
+        '“Enlightenment is its own reward, its own punishment. You begin to see so much more. '
+        'And so much more sees you.” - Laird Barron',
+        '''"The cold impassive stars didn't bother him so much as the gaps between them did" - Laird Barron''',
+        '“Most people learn to save themselves by artificially limiting the content of consciousness.”'
+        ' - Thomas Ligotti',
+        '“The only value of this world lay in its power - at certain times - to suggest another world.”'
+        ' - Thomas Ligotti',
+        '"The world is indeed comic, but the joke is on mankind" - H. P. Lovecraft',
+        '"The oldest and strongest emotion of mankind is fear, and the oldest and strongest '
+        'kind of fear is fear of the unknown" - H. P. Lovecraft',
+    ],
     'campaign_subtitle': 'Chronicles beyond sanity',
     'sessions_subtitle': 'Descents into the truth',
     'lore_subtitle': 'Forbidden knowledge',

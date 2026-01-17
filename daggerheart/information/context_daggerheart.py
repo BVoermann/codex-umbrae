@@ -10,7 +10,17 @@ context = {
     'subtitle': "Where Hope and Fear Collide",
     'welcome': 'In a world of magic and peril, heroes rise to face impossible odds. '
                'Every roll of the dice brings both triumph and tribulation.',
-    'quote': '"Hope is the dagger, fear is the heart."',
+    'quote': [
+        '"Hope is the dagger, fear is the heart."',
+        '"Hope is the blade we forge together, when fear would have us stand alone"',
+        '"Carry another burden, for no hero walks alone"',
+        '"We are the sum of our connections"',
+        '"Light and Shadow, dancing in the same soul"',
+        '"Every scar tells two stories, the wound that made it and the strength to heal it"',
+        '"Trust is not the absence of fear, it is reaching for another hand despite it"',
+        '"The darkness only makes our shared light burn brighter"',
+        '"When the dice betray you, your companions will catch you"',
+    ],
     'campaign_subtitle': 'Epic tales of adventure',
     'sessions_subtitle': 'Chronicles of heroic deeds',
     'lore_subtitle': 'Legends and mythology',
