@@ -9,8 +9,7 @@ context = {
     'title': 'KULT',
     'subtitle': "Divinity Lost",
     'welcome': 'Hinter dem Schleier der Realität verbirgt sich unsere Wahrheit. Ein Gefängnis, vor Urzeiten erbaut. '
-               'Die Illusion bricht. Metropolis blutet.'
-               'The illusion fractures. The metropolis bleeds.',
+               'Die Illusion bricht. Metropolis blutet.',
     'quote': [
         '"Wir sind nur Fragmente vergessener Götter, die durch das Labyrinth der Lügen wandern."',
         '"Erleuchtung ist ihre eigene Belohnung, ihre eigene Strafe. Man beginnt, so viel mehr zu '

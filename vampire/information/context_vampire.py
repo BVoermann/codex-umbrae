@@ -9,7 +9,7 @@ context = {
     'title': 'Vampire: The Masquerade',
     'subtitle': "Trete ein in die World of Darkness",
     'welcome': 'Willkommen in den Schatten. Dort, wo unsterbliche Raubtiere unter Sterblichen wandeln,'
-               'gebunden an uralte Traditionen und verflucht mit einem unstillbaren Durst.',
+               ' gebunden an uralte Traditionen und verflucht mit einem unstillbaren Durst.',
     'quote': ['"A Beast I am, lest a Beast I become."',
               '''"Gehe nicht gelassen in die gute Nacht" - Dylan Thomas''',
               '"Wehe dem, der ein Kind kränkt" - Fjodor Dostojewski',

@@ -9,7 +9,7 @@ context = {
     'title': 'Daggerheart',
     'subtitle': "Wo Hoffnung und Angst aufeinandertreffen",
     'welcome': 'In einer Welt voller Magie und Gefahren stellen sich Helden unmöglichen Herausforderungen.'
-               'eder Würfelwurf bringt sowohl Triumph als auch Leid mit sich.',
+               ' Jeder Würfelwurf bringt sowohl Triumph als auch Leid mit sich.',
     'quote': [
         '"Hoffnung ist der Dolch, Angst ist das Herz."',
         '"Hoffnung ist die Klinge, die wir gemeinsam schmieden, wenn die Angst uns allein lassen würde."',
