@@ -10,7 +10,6 @@
 <body>
     <div class="container">
         {% include 'title_and_navbar.html' %}
-
         <div style="text-align: center; color: #e0e0e0; max-width: 800px; margin: 0 auto;">
                 <p>{{ title }} - {{ request.GET.campaign }} - Session Playlist {{ forloop.counter }}</p>
                     <iframe
@@ -22,9 +21,49 @@
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope;
                             picture-in-picture; web-share"
                             referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
-
                     </iframe>
+            {% if transcript_url %}
+                <div>
+                    <label for="session-select">Wähle eine Session:</label>
+                    <select id="session-select" name="session">
+                        {% for num in episode_range %}
+                            <option value="{{ num }}">Session {{ num }}</option>
+                        {% endfor %}
+                    </select>
+
+                    <br><br>
+
+                    <button id="download-btn">Download Transcript</button>
+                </div>
+            {% endif %}
         </div>
     </div>
+
+<script>
+    document.getElementById('download-btn').addEventListener('click', async function() {
+        const sessionId = document.getElementById('session-select').value;
+        if (sessionId) {
+            const url = '{{ transcript_url }}'
+                + sessionId
+                + '.txt';
+
+            try {
+                const response = await fetch(url);
+                const blob = await response.blob();
+                const link = document.createElement('a');
+                link.href = URL.createObjectURL(blob);
+                link.download = '{{ request.GET.campaign }}' + sessionId + '.txt';
+                document.body.appendChild(link);
+                link.click();
+                document.body.removeChild(link);
+                URL.revokeObjectURL(link.href);
+            } catch (error) {
+                alert('Error downloading file');
+            }
+        } else {
+            alert('Bitte wähle zuerst eine Session');
+        }
+    });
+</script>
 </body>
 </html>

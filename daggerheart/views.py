@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from daggerheart.information.context_daggerheart import context
-from daggerheart.information.episodes_daggerheart import playlist_KdS
+from daggerheart.information.episodes_daggerheart import playlist_KdS, transcripts_first_part_KdS
 from codexumbrae.auth_views import require_sessions_password
 
 def home(request):
@@ -18,9 +18,18 @@ def sessions(request):
     campaign_id = request.GET.get('campaign')
     if campaign_id == 'Kinder-des-Schleiers':
         playlist_url = playlist_KdS
+        transcript_url = transcripts_first_part_KdS
+        episode_range = range(1, 4 + 1)
     else:
         playlist_url = []
-    return render(request, 'systems_sessions.html', context={**context, 'playlist_url': playlist_url,})
+        transcript_url = ""
+        episode_range = range(1)
+    return render(request, 'systems_sessions.html', context={
+        **context,
+        'playlist_url': playlist_url,
+        'transcript_url': transcript_url,
+        'episode_range': episode_range,
+    })
 
 
 def lore(request):
