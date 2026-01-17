@@ -1,3 +1,5 @@
+        @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Crimson+Text:ital,wght@0,400;0,600;1,400&display=swap');
+
         * {
             margin: 0;
             padding: 0;
@@ -5,7 +7,7 @@
         }
 
         body {
-            font-family: 'Georgia', 'Book Antiqua', serif;
+            font-family: 'Crimson Text', 'Georgia', serif;
             min-height: 100vh;
             background: linear-gradient(135deg, #0d1b2a 0%, #1b263b 30%, #415a77 60%, #1b263b 90%, #0d1b2a 100%);
             background-attachment: fixed;
@@ -42,6 +44,7 @@
             text-align: center;
             font-size: 3rem;
             margin-bottom: 0.8rem;
+            font-family: 'Cinzel', 'Georgia', serif;
             background: linear-gradient(135deg, #b8860b 0%, #ffd700 30%, #ff6b6b 60%, #b8860b 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
@@ -168,10 +171,11 @@
         }
 
         .nav-card h2 {
+            font-family: 'Cinzel', 'Georgia', serif;
             color: #f4e4d7;
             font-size: 1.4rem;
             margin-bottom: 0.8rem;
-            font-weight: 400;
+            font-weight: 500;
             letter-spacing: 0.05em;
             position: relative;
             z-index: 1;
@@ -299,6 +303,7 @@
         }
 
         .campaign-info h2 {
+            font-family: 'Cinzel', 'Georgia', serif;
             color: #ffd700;
             font-size: 1.6rem;
             margin-bottom: 1.5rem;
@@ -412,6 +417,7 @@
         }
 
         .character-card h2 {
+            font-family: 'Cinzel', 'Georgia', serif;
             color: #ffd700;
             font-size: 1.5rem;
             text-align: center;
