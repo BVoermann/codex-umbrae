@@ -8,39 +8,34 @@ context = {
     'site_title': 'KULT',
     'title': 'KULT',
     'subtitle': "Divinity Lost",
-    'welcome': 'Beyond the veil of reality lies the truth of our prison. '
+    'welcome': 'Hinter dem Schleier der Realität verbirgt sich unsere Wahrheit. Ein Gefängnis, vor Urzeiten erbaut. '
+               'Die Illusion bricht. Metropolis blutet.'
                'The illusion fractures. The metropolis bleeds.',
     'quote': [
-        '"We are but fragments of forgotten gods, wandering the labyrinth of lies."',
-        '“Enlightenment is its own reward, its own punishment. You begin to see so much more. '
-        'And so much more sees you.” - Laird Barron',
-        '''"The cold impassive stars didn't bother him so much as the gaps between them did" - Laird Barron''',
-        '“Most people learn to save themselves by artificially limiting the content of consciousness.”'
-        ' - Thomas Ligotti',
-        '“The only value of this world lay in its power - at certain times - to suggest another world.”'
-        ' - Thomas Ligotti',
-        '"The world is indeed comic, but the joke is on mankind" - H. P. Lovecraft',
-        '"The oldest and strongest emotion of mankind is fear, and the oldest and strongest '
-        'kind of fear is fear of the unknown" - H. P. Lovecraft',
+        '"Wir sind nur Fragmente vergessener Götter, die durch das Labyrinth der Lügen wandern."',
+        '"Erleuchtung ist ihre eigene Belohnung, ihre eigene Strafe. Man beginnt, so viel mehr zu '
+        'sehen. Und so viel mehr sieht einen.“ – Laird Barron',
+        '"Die kalten, unbewegten Sterne störten ihn nicht so sehr wie die Lücken zwischen ihnen.“ – Laird Barron',
+        '"Die meisten Menschen lernen, sich selbst zu retten, indem sie den Inhalt ihres '
+         'Bewusstseins künstlich einschränken.“ – Thomas Ligotti',
+        '"Der einzige Wert dieser Welt lag in ihrer Fähigkeit, zu bestimmten Zeiten eine andere Welt anzudeuten.“'
+        '– Thomas Ligotti',
+        '"Die Welt ist in der Tat komisch, aber der Witz geht auf Kosten der Menschheit“ – H. P. Lovecraft',
+        '"Die älteste und stärkste Emotion der Menschheit ist die Angst, und die älteste und stärkste'
+        'Art von Angst ist die Angst vor dem Unbekannten" – H. P. Lovecraft',
     ],
-    'campaign_subtitle': 'Chronicles beyond sanity',
-    'sessions_subtitle': 'Descents into the truth',
-    'lore_subtitle': 'Forbidden knowledge',
-    'characters_subtitle': 'Prisoners of the metropolis',
-    'media_subtitle': 'Visions of the broken world',
-    'search_subtitle': 'Seek what should not be found',
+    'campaign_subtitle': 'Chroniken jenseits der Vernunft',
+    'sessions_subtitle': 'Abstieg in die Wahrheit',
+    'lore_subtitle': 'Verbotenes Wissen',
+    'characters_subtitle': 'Gefangene der Metropolis',
     'site_title_campaign': 'Kult - Kampagnen',
     'site_title_sessions': 'Kult - Sessions',
     'site_title_lore': 'Kult - Lore',
     'site_title_characters': 'Kult - Charaktere',
-    'site_title_media': 'Kult - Medien',
-    'site_title_search': 'Kult - Suche',
     'system_home': 'Kult Home',
     'url_home': 'kult_home',
     'url_campaign': 'kult_campaign',
     'url_sessions': 'kult_sessions',
     'url_lore': 'kult_lore',
     'url_characters': 'kult_characters',
-    'url_media': 'kult_media',
-    'url_search': 'kult_search',
 }
