@@ -214,6 +214,82 @@
             font-size: 1rem;
         }
 
+        .video-container {
+            margin: 2rem 0;
+            padding: 1.5rem;
+            background: linear-gradient(135deg, rgba(58, 28, 94, 0.7) 0%, rgba(42, 13, 74, 0.7) 100%);
+            border: 2px solid rgba(218, 165, 32, 0.3);
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+        }
+
+        .video-container iframe {
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+        }
+
+        .transcript-section {
+            margin-top: 2rem;
+            padding: 1.5rem;
+            background: linear-gradient(135deg, rgba(58, 28, 94, 0.7) 0%, rgba(42, 13, 74, 0.7) 100%);
+            border: 2px solid rgba(218, 165, 32, 0.3);
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+        }
+
+        .transcript-section label {
+            display: block;
+            margin-bottom: 1rem;
+            color: #c4b0d4;
+            font-size: 1rem;
+            letter-spacing: 0.03em;
+        }
+
+        #session-select {
+            padding: 0.6rem 1.2rem;
+            font-size: 1rem;
+            font-family: 'Georgia', 'Palatino', serif;
+            background: rgba(42, 13, 74, 0.8);
+            color: #e8e8e8;
+            border: 2px solid rgba(218, 165, 32, 0.4);
+            border-radius: 6px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        #session-select:hover,
+        #session-select:focus {
+            border-color: rgba(218, 165, 32, 0.6);
+            outline: none;
+            box-shadow: 0 0 10px rgba(218, 165, 32, 0.3);
+        }
+
+        #session-select option {
+            background: #1a0a2e;
+            color: #e8e8e8;
+        }
+
+        #download-btn {
+            padding: 0.8rem 1.8rem;
+            font-size: 1rem;
+            font-family: 'Georgia', 'Palatino', serif;
+            background: linear-gradient(135deg, rgba(218, 165, 32, 0.25) 0%, rgba(255, 215, 0, 0.15) 100%);
+            color: #daa520;
+            border: 2px solid rgba(218, 165, 32, 0.5);
+            border-radius: 6px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            letter-spacing: 0.05em;
+        }
+
+        #download-btn:hover {
+            background: linear-gradient(135deg, rgba(218, 165, 32, 0.4) 0%, rgba(255, 215, 0, 0.3) 100%);
+            border-color: rgba(218, 165, 32, 0.8);
+            box-shadow: 0 4px 15px rgba(218, 165, 32, 0.35);
+            transform: translateY(-2px);
+            color: #ffd700;
+        }
+
         @media (max-width: 768px) {
             .title {
                 font-size: 2.2rem;

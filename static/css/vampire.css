@@ -182,6 +182,82 @@
             border-top: 1px solid rgba(139, 0, 0, 0.2);
         }
 
+        .video-container {
+            margin: 2rem 0;
+            padding: 1.5rem;
+            background: rgba(20, 5, 10, 0.6);
+            border: 1px solid rgba(139, 0, 0, 0.3);
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+        }
+
+        .video-container iframe {
+            border-radius: 6px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+        }
+
+        .transcript-section {
+            margin-top: 2rem;
+            padding: 1.5rem;
+            background: rgba(20, 5, 10, 0.6);
+            border: 1px solid rgba(139, 0, 0, 0.3);
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+        }
+
+        .transcript-section label {
+            display: block;
+            margin-bottom: 1rem;
+            color: #888;
+            font-size: 1rem;
+            letter-spacing: 0.03em;
+        }
+
+        #session-select {
+            padding: 0.6rem 1.2rem;
+            font-size: 1rem;
+            font-family: 'Georgia', 'Garamond', serif;
+            background: rgba(10, 5, 8, 0.8);
+            color: #d4d4d4;
+            border: 1px solid rgba(139, 0, 0, 0.4);
+            border-radius: 6px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        #session-select:hover,
+        #session-select:focus {
+            border-color: rgba(139, 0, 0, 0.7);
+            outline: none;
+            box-shadow: 0 0 10px rgba(139, 0, 0, 0.3);
+        }
+
+        #session-select option {
+            background: #0d0208;
+            color: #d4d4d4;
+        }
+
+        #download-btn {
+            padding: 0.8rem 1.8rem;
+            font-size: 1rem;
+            font-family: 'Georgia', 'Garamond', serif;
+            background: rgba(139, 0, 0, 0.2);
+            color: #8b0000;
+            border: 1px solid rgba(139, 0, 0, 0.5);
+            border-radius: 6px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            letter-spacing: 0.05em;
+        }
+
+        #download-btn:hover {
+            background: rgba(139, 0, 0, 0.4);
+            border-color: rgba(139, 0, 0, 0.8);
+            box-shadow: 0 4px 15px rgba(139, 0, 0, 0.4);
+            transform: translateY(-2px);
+            color: #c44;
+        }
+
         @media (max-width: 768px) {
             .title {
                 font-size: 2rem;

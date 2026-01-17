@@ -11,30 +11,32 @@
     <div class="container">
         {% include 'title_and_navbar.html' %}
         <div style="text-align: center; color: #e0e0e0; max-width: 800px; margin: 0 auto;">
-                <p>{{ title }} - {{ request.GET.campaign }} - Session Playlist {{ forloop.counter }}</p>
-                    <iframe
-                            width="560"
-                            height="315"
-                            src="{{ playlist_url }}"
-                            title="YouTube video player"
-                            frameborder="0"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope;
-                            picture-in-picture; web-share"
-                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
-                    </iframe>
+            <div class="video-container">
+                <p style="margin-bottom: 1rem;">{{ title }} - {{ request.GET.campaign }}</p>
+                <iframe
+                        width="560"
+                        height="315"
+                        src="{{ playlist_url }}"
+                        title="YouTube video player"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope;
+                        picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+                </iframe>
+            </div>
             {% if transcript_url %}
-                <div>
-                    <label for="session-select">Wähle eine Session:</label>
-                    <select id="session-select" name="session">
-                        {% for num in episode_range %}
-                            <option value="{{ num }}">Session {{ num }}</option>
-                        {% endfor %}
-                    </select>
+            <div class="transcript-section">
+                <label for="session-select">Wähle die Session für die du das Transkript herunterladen möchtest:</label>
+                <select id="session-select" name="session">
+                    {% for num in episode_range %}
+                        <option value="{{ num }}">Session {{ num }}</option>
+                    {% endfor %}
+                </select>
 
-                    <br><br>
+                <br><br>
 
-                    <button id="download-btn">Download Transcript</button>
-                </div>
+                <button id="download-btn">Download Transcript</button>
+            </div>
             {% endif %}
         </div>
     </div>
