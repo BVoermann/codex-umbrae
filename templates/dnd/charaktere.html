@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,7 +8,61 @@
     <div class="container">
         <div style="text-align: center; color: #e0e0e0; max-width: 800px; margin: 0 auto;">
             <p style="font-style: italic; color: #b8b8d1;">
+            {% if request.GET.campaign == "Der-unermessliche-Zerfall" %}
+                Cithara von der Vogelweide
+                <img src="{% static 'pictures/dnd/der_unermessliche_zerfall/Cithara.png' %}" height="50%" width="50%">
+                <iframe src="{% static 'sheets/dnd/der_unermessliche_zerfall/Cithara.pdf' %}" height="600px" width="100%">
+                </iframe>
+                Morrigan Windblüte
+                <img src="{% static 'pictures/dnd/der_unermessliche_zerfall/Morrigan.png' %}" height="50%" width="50%">
+                <iframe src="{% static 'sheets/dnd/der_unermessliche_zerfall/Morrigan.pdf' %}" height="600px" width="100%">
+                </iframe>
+                Dith'orak Deeseng
+                <img src="{% static "pictures/dnd/der_unermessliche_zerfall/Dith'orak.png" %}" height="50%" width="50%">
+                <iframe src="{% static "sheets/dnd/der_unermessliche_zerfall/Dith'orak.pdf" %}" height="600px" width="100%">
+                </iframe>
+                S'Nur'Ahr
+                <img src="{% static 'pictures/dnd/der_unermessliche_zerfall/SNurAhr.png' %}" height="50%" width="50%">
+                <iframe src="{% static "sheets/dnd/der_unermessliche_zerfall/S'Nur'Ahr.pdf" %}" height="600px" width="100%">
+                </iframe>
+                Etilos Lölicus von und zu Ticenstein
+                <img src="{% static 'pictures/dnd/der_unermessliche_zerfall/Etilos.png' %}" height="50%" width="50%">
+                <iframe src="{% static "sheets/dnd/der_unermessliche_zerfall/Etilos.pdf" %}" height="600px" width="100%">
+                </iframe>
+            {% endif %}
+            {% if request.GET.campaign == "Das-Geheimnis-von-Dyadan" %}
 
+                <img src="{% static 'pictures/dnd/der_unermessliche_zerfall/Cithara.png' %}" height="50%" width="50%">
+                <iframe src="{% static 'sheets/dnd/der_unermessliche_zerfall/Cithara.pdf' %}" height="600px" width="100%">
+                </iframe>
+                <img src="{% static 'pictures/dnd/der_unermessliche_zerfall/Morrigan.png' %}" height="50%" width="50%">
+                <iframe src="{% static 'sheets/dnd/der_unermessliche_zerfall/Morrigan.pdf' %}" height="600px" width="100%">
+                </iframe>
+                <img src="{% static "pictures/dnd/das_geheimnis_von_dyadan/Sneeks.png" %}" height="50%" width="50%">
+                <img src="{% static 'pictures/dnd/das_geheimnis_von_dyadan/Chronofell.png' %}" height="50%" width="50%">
+                <img src="{% static 'pictures/dnd/das_geheimnis_von_dyadan/Brombur_Klauth.png' %}" height="50%" width="50%">
+                <img src="{% static 'pictures/dnd/das_geheimnis_von_dyadan/Gwairan.png' %}" height="50%" width="50%">
+                <img src="{% static 'pictures/dnd/das_geheimnis_von_dyadan/Amelia_Eisenherz.webp' %}" height="50%" width="50%">
+                <img src="{% static 'pictures/dnd/das_geheimnis_von_dyadan/cithara_und_morrigan.png' %}" height="50%" width="50%">
+            {% endif %}
+            {% if request.GET.campaign == "Unbekannte-Heimat" %}
+                Esmée van de Velden
+                <img src="{% static 'pictures/dnd/der_unermessliche_zerfall/Cithara.png' %}" height="50%" width="50%">
+                <iframe src="{% static 'sheets/dnd/der_unermessliche_zerfall/Cithara.pdf' %}" height="600px" width="100%">
+                </iframe>
+                <img src="{% static 'pictures/dnd/der_unermessliche_zerfall/Morrigan.png' %}" height="50%" width="50%">
+                <iframe src="{% static 'sheets/dnd/der_unermessliche_zerfall/Morrigan.pdf' %}" height="600px" width="100%">
+                </iframe>
+                <img src="{% static "pictures/dnd/der_unermessliche_zerfall/Dith'orak.png" %}" height="50%" width="50%">
+                <iframe src="{% static "sheets/dnd/der_unermessliche_zerfall/Dith'orak.pdf" %}" height="600px" width="100%">
+                </iframe>
+                <img src="{% static 'pictures/dnd/der_unermessliche_zerfall/SNurAhr.png' %}" height="50%" width="50%">
+                <iframe src="{% static "sheets/dnd/der_unermessliche_zerfall/S'Nur'Ahr.pdf" %}" height="600px" width="100%">
+                </iframe>
+                <img src="{% static 'pictures/dnd/der_unermessliche_zerfall/Etilos.png' %}" height="50%" width="50%">
+                <iframe src="{% static "sheets/dnd/der_unermessliche_zerfall/Etilos.pdf" %}" height="600px" width="100%">
+                </iframe>
+            {% endif %}
             </p>
         </div>
     </div>

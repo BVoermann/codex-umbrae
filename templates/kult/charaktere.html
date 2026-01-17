@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,13 +6,22 @@
 </head>
 <body>
     <div class="container">
-
         <div style="text-align: center; color: #e0e0e0; max-width: 800px; margin: 0 auto;">
             <p style="font-size: 1.2rem; margin-bottom: 1.5rem;">
-                Character profiles and sheets.
-            </p>
-            <p style="font-style: italic; color: #b8b8d1;">
-                Content coming soon...
+            {% if request.GET.campaign == "Ordo-Orbis-Dei" %}
+                Joanne Taylor
+                <img src="{% static 'pictures/kult/Ordo_Orbis_Dei/Joanne.png' %}" height="50%" width="50%">
+                <iframe src="{% static 'sheets/kult/Ordo_Orbis_Dei/Joanne_Taylor.pdf' %}" height="600px" width="100%">
+                </iframe>
+                Damian Crane
+                <img src="{% static 'pictures/kult/Ordo_Orbis_Dei/Damian.jpg' %}" height="50%" width="50%">
+                <iframe src="{% static 'sheets/kult/Ordo_Orbis_Dei/Damian_Crane.pdf' %}" height="600px" width="100%">
+                </iframe>
+                Harry McTannen
+                <img src="{% static "pictures/kult/Ordo_Orbis_Dei/Harry.jpg" %}" height="50%" width="50%">
+                <iframe src="{% static "sheets/kult/Ordo_Orbis_Dei/Harry_McTannen.pdf" %}" height="600px" width="100%">
+                </iframe>
+            {% endif %}
             </p>
         </div>
     </div>

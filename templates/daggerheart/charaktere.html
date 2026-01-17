@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,10 +9,17 @@
 
         <div style="text-align: center; color: #e0e0e0; max-width: 800px; margin: 0 auto;">
             <p style="font-size: 1.2rem; margin-bottom: 1.5rem;">
-                Character profiles and sheets.
-            </p>
-            <p style="font-style: italic; color: #b8b8d1;">
-                Content coming soon...
+            {% if request.GET.campaign == "Kinder-des-Schleiers" %}
+                Ancey
+                <img src="{% static 'pictures/daggerheart/Kinder_des_Schleiers/Ancey.webp' %}" height="50%" width="50%">
+                <img src="{% static 'sheets/daggerheart/Kinder_des_Schleiers/Ancey_Sheet.jpg' %}" height="600px" width="100%">
+                Anhedonia
+                <img src="{% static 'pictures/daggerheart/Kinder_des_Schleiers/Anhedonia.webp' %}" height="50%" width="50%">
+                <img src="{% static 'sheets/daggerheart/Kinder_des_Schleiers/Anhedonia_Sheet.jpg' %}" height="600px" width="100%">
+                Jav
+                <img src="{% static "pictures/daggerheart/Kinder_des_Schleiers/Jav.png" %}" height="50%" width="50%">
+                <img src="{% static "sheets/daggerheart/Kinder_des_Schleiers/Jav_Sheet.jpg" %}" height="600px" width="100%">
+            {% endif %}
             </p>
         </div>
     </div>

@@ -1,13 +1,13 @@
-        <h1 class="title">{{ site_title }}</h1>
-        <p style="text-align: center; color: #b8b8d1; margin-bottom: 2rem;">
-            <a href="{% url url_home %}{% if request.GET.campaign %}?campaign={{ request.GET.campaign }}{% endif %}" style="color: #b8b8d1; text-decoration: underline;">← Back to {{ system_home }}</a>
-        </p>
+<h1 class="title">{{ site_title }}</h1>
+<p style="text-align: center; color: #b8b8d1; margin-bottom: 2rem;">
+    <a href="{% url url_home %}{% if request.GET.campaign %}?campaign={{ request.GET.campaign }}{% endif %}" style="color: #b8b8d1; text-decoration: underline;">← Back to {{ system_home }}</a>
+</p>
 
-        <nav class="nav-bar">
-            <ul class="nav-links">
-                <li><a href="{% url url_campaign %}{% if request.GET.campaign %}?campaign={{ request.GET.campaign }}{% endif %}"{% if request.resolver_match.url_name == url_campaign %} class="active"{% endif %}>Kampagnen</a></li>
-                <li><a href="{% url url_sessions %}{% if request.GET.campaign %}?campaign={{ request.GET.campaign }}{% endif %}"{% if request.resolver_match.url_name == url_sessions %} class="active"{% endif %}>Sessions</a></li>
-                <li><a href="{% url url_lore %}{% if request.GET.campaign %}?campaign={{ request.GET.campaign }}{% endif %}"{% if request.resolver_match.url_name == url_lore %} class="active"{% endif %}>Lore</a></li>
-                <li><a href="{% url url_characters %}{% if request.GET.campaign %}?campaign={{ request.GET.campaign }}{% endif %}"{% if request.resolver_match.url_name == url_characters %} class="active"{% endif %}>Charaktere</a></li>
-            </ul>
-        </nav>
+<nav class="nav-bar">
+    <ul class="nav-links">
+        <li><a href="{% url url_campaign %}{% if request.GET.campaign %}?campaign={{ request.GET.campaign }}{% endif %}"{% if request.resolver_match.url_name == url_campaign %} class="active"{% endif %}>Kampagnen</a></li>
+        <li><a href="{% url url_sessions %}{% if request.GET.campaign %}?campaign={{ request.GET.campaign }}{% endif %}"{% if request.resolver_match.url_name == url_sessions %} class="active"{% endif %}>Sessions</a></li>
+        <li><a href="{% url url_lore %}{% if request.GET.campaign %}?campaign={{ request.GET.campaign }}{% endif %}"{% if request.resolver_match.url_name == url_lore %} class="active"{% endif %}>Lore</a></li>
+        <li><a href="{% url url_characters %}{% if request.GET.campaign %}?campaign={{ request.GET.campaign }}{% endif %}"{% if request.resolver_match.url_name == url_characters %} class="active"{% endif %}>Charaktere</a></li>
+    </ul>
+</nav>
