@@ -4,18 +4,13 @@ from .models import System, WikiEntry, WikiRevision
 # Admin-Interface for managing systems/campaigns
 @admin.register(System)
 class SystemAdmin(admin.ModelAdmin):
-    list_display = ['name', 'slug', 'status', 'start_date']
-    list_filter = ['status', 'start_date']
+    list_display = ['name', 'slug']
     search_fields = ['name', 'description']
     prepopulated_fields = {'slug': ('name',)}
 
     fieldsets = (
     ('Basic Information', {
         'fields': ('name', 'slug', 'description')
-    }),
-    ('Campaign Details', {
-        'fields': ('start_date', 'status'),
-        'classes': ('collapse',),
     }),
     )
 

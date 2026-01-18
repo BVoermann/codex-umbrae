@@ -50,7 +50,7 @@ class WikiEntry(models.Model):
         help_text="URL-friendly abbreviation of the title"
     )
 
-    entry_type = models.Charfield(
+    entry_type = models.CharField(
         max_length=30,
         choices=ENTRY_TYPES,
         help_text="Type of entry"
@@ -67,7 +67,7 @@ class WikiEntry(models.Model):
 
     # Optional metadata
     image = models.ImageField(
-        upload_to="wiki/",
+        upload_to="wiki/images",
         blank=True,
         null=True,
         help_text="Optional image for this entry"
