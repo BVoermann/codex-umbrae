@@ -1,0 +1,38 @@
+{% extends 'wiki/wiki_base.html' %}
+
+{% block title %}{{ type_display }} - {{ system.name }} Wiki{% endblock %}
+
+{% block content %}
+<div class="wiki-by-type">
+    <h2 class="type-heading">{{ type_display }}</h2>
+
+    {% if entries %}
+    <div class="entries-grid">
+        {% for entry in entries %}
+        <article class="entry-card">
+            {% if entry.image %}
+            <div class="entry-image">
+                <img src="{{ entry.image.url }}" alt="{{ entry.title }}">
+            </div>
+            {% endif %}
+            <div class="entry-content">
+                <h3><a href="{% url 'wiki:wiki_detail' system.slug entry.slug %}">{{ entry.title }}</a></h3>
+                {% if entry.summary %}
+                <p class="entry-summary">{{ entry.summary|truncatewords:20 }}</p>
+                {% endif %}
+                <div class="entry-meta">
+                    <span class="entry-views">{{ entry.views }} Aufrufe</span>
+                </div>
+            </div>
+        </article>
+        {% endfor %}
+    </div>
+    {% else %}
+    <p class="no-entries">Noch keine Einträge in dieser Kategorie.</p>
+    {% endif %}
+
+    <div class="back-to-wiki">
+        <a href="{% url 'wiki:wiki_home' system.slug %}">Zurück zur Übersicht</a>
+    </div>
+</div>
+{% endblock %}

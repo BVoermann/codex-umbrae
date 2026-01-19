@@ -1,0 +1,60 @@
+{% extends 'wiki/wiki_base.html' %}
+
+{% block title %}{{ entry.title }} bearbeiten - {{ system.name }} Wiki{% endblock %}
+
+{% block content %}
+<div class="wiki-form">
+    <h2>"{{ entry.title }}" bearbeiten</h2>
+
+    {% if messages %}
+    <div class="messages">
+        {% for message in messages %}
+        <div class="message {{ message.tags }}">{{ message }}</div>
+        {% endfor %}
+    </div>
+    {% endif %}
+
+    <form method="post" enctype="multipart/form-data" class="entry-form">
+        {% csrf_token %}
+
+        <div class="form-group">
+            <label for="title">Titel *</label>
+            <input type="text" name="title" id="title" value="{{ entry.title }}" required class="form-input">
+        </div>
+
+        <div class="form-group">
+            <label for="entry_type">Kategorie *</label>
+            <select name="entry_type" id="entry_type" required class="form-select">
+                {% for entry_type in entry_types %}
+                <option value="{{ entry_type.0 }}"{% if entry.entry_type == entry_type.0 %} selected{% endif %}>{{ entry_type.1 }}</option>
+                {% endfor %}
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="summary">Kurzbeschreibung</label>
+            <textarea name="summary" id="summary" rows="3" class="form-textarea">{{ entry.summary }}</textarea>
+        </div>
+
+        <div class="form-group">
+            <label for="content">Inhalt *</label>
+            <textarea name="content" id="content" rows="15" required class="form-textarea">{{ entry.content }}</textarea>
+        </div>
+
+        <div class="form-group">
+            <label for="tags">Tags (kommagetrennt)</label>
+            <input type="text" name="tags" id="tags" value="{{ entry.tags }}" class="form-input">
+        </div>
+
+        <div class="form-group">
+            <label for="edit_summary">Änderungsnotiz</label>
+            <input type="text" name="edit_summary" id="edit_summary" class="form-input" placeholder="Was wurde geändert?">
+        </div>
+
+        <div class="form-actions">
+            <button type="submit" class="submit-button">Änderungen speichern</button>
+            <a href="{% url 'wiki:wiki_detail' system.slug entry.slug %}" class="cancel-link">Abbrechen</a>
+        </div>
+    </form>
+</div>
+{% endblock %}

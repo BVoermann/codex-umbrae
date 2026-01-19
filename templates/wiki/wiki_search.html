@@ -1,0 +1,37 @@
+{% extends 'wiki/wiki_base.html' %}
+
+{% block title %}Suche - {{ system.name }} Wiki{% endblock %}
+
+{% block content %}
+<div class="wiki-search">
+    <form method="get" class="search-form">
+        <div class="search-input-group">
+            <input type="text" name="q" value="{{ query }}" placeholder="Nach Einträgen suchen..." class="search-input" autofocus>
+            <button type="submit" class="search-button">Suchen</button>
+        </div>
+    </form>
+
+    {% if query %}
+    <div class="search-results">
+        <h2>Suchergebnisse für "{{ query }}"</h2>
+        <p class="result-count">{{ result_count }} Ergebnis{% if result_count != 1 %}se{% endif %} gefunden</p>
+
+        {% if results %}
+        <div class="results-list">
+            {% for entry in results %}
+            <article class="result-card">
+                <h3><a href="{% url 'wiki:wiki_detail' system.slug entry.slug %}">{{ entry.title }}</a></h3>
+                <span class="entry-type-badge">{{ entry.get_entry_type_display }}</span>
+                {% if entry.summary %}
+                <p class="result-summary">{{ entry.summary|truncatewords:30 }}</p>
+                {% endif %}
+            </article>
+            {% endfor %}
+        </div>
+        {% else %}
+        <p class="no-results">Keine Einträge gefunden. Versuche es mit anderen Suchbegriffen.</p>
+        {% endif %}
+    </div>
+    {% endif %}
+</div>
+{% endblock %}

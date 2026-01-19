@@ -442,3 +442,464 @@
                 grid-template-columns: 1fr;
             }
         }
+
+        /* Wiki Styles - Vampire Theme */
+        .wiki-nav-links {
+            background: linear-gradient(135deg, rgba(30, 10, 15, 0.85) 0%, rgba(15, 5, 10, 0.85) 100%);
+            border: 2px solid rgba(139, 0, 0, 0.5);
+        }
+
+        .wiki-nav-links li a {
+            color: #a08080;
+        }
+
+        .wiki-nav-links li a:hover,
+        .wiki-nav-links li a.active {
+            color: #e8d0d0;
+            background: rgba(139, 0, 0, 0.3);
+            text-shadow: 0 0 10px rgba(139, 0, 0, 0.5);
+        }
+
+        .stat-card {
+            background: linear-gradient(135deg, rgba(30, 10, 15, 0.85) 0%, rgba(15, 5, 10, 0.85) 100%);
+            border: 2px solid rgba(139, 0, 0, 0.5);
+        }
+
+        .stat-card::before {
+            background: linear-gradient(90deg, #500000, #8b0000, #500000);
+        }
+
+        .stat-number {
+            color: #e8d0d0;
+            font-family: 'Playfair Display', 'Georgia', serif;
+            text-shadow: 0 0 20px rgba(139, 0, 0, 0.5);
+        }
+
+        .stat-label {
+            color: #a08080;
+        }
+
+        .category-card {
+            background: linear-gradient(135deg, rgba(30, 10, 15, 0.75) 0%, rgba(15, 5, 10, 0.75) 100%);
+            border: 2px solid rgba(139, 0, 0, 0.35);
+            color: #a08080;
+        }
+
+        .category-card:hover {
+            background: linear-gradient(135deg, rgba(60, 20, 30, 0.85) 0%, rgba(30, 10, 15, 0.85) 100%);
+            border-color: rgba(180, 30, 30, 0.7);
+            box-shadow: 0 8px 30px rgba(139, 0, 0, 0.3);
+        }
+
+        .category-count {
+            background: rgba(139, 0, 0, 0.4);
+            color: #e8d0d0;
+        }
+
+        .wiki-section {
+            background: linear-gradient(135deg, rgba(30, 10, 15, 0.85) 0%, rgba(15, 5, 10, 0.85) 100%);
+            border: 2px solid rgba(139, 0, 0, 0.5);
+        }
+
+        .wiki-section h2 {
+            font-family: 'Playfair Display', 'Georgia', serif;
+            color: #e8d0d0;
+            border-bottom: 2px solid rgba(139, 0, 0, 0.4);
+            text-shadow: 0 0 15px rgba(139, 0, 0, 0.4);
+        }
+
+        .entry-list li {
+            background: rgba(15, 5, 10, 0.4);
+            border: 1px solid rgba(139, 0, 0, 0.15);
+        }
+
+        .entry-list li:hover {
+            background: rgba(60, 20, 30, 0.4);
+            border-color: rgba(180, 30, 30, 0.3);
+        }
+
+        .entry-list li a {
+            color: #d8c8c8;
+        }
+
+        .entry-list li a:hover {
+            color: #e8d0d0;
+        }
+
+        .entry-type,
+        .entry-views {
+            background: rgba(139, 0, 0, 0.3);
+            color: #e8d0d0;
+        }
+
+        .filter-form {
+            background: linear-gradient(135deg, rgba(30, 10, 15, 0.85) 0%, rgba(15, 5, 10, 0.85) 100%);
+            border: 2px solid rgba(139, 0, 0, 0.5);
+        }
+
+        .filter-group label {
+            color: #a08080;
+        }
+
+        .filter-group select {
+            background: rgba(15, 5, 10, 0.9);
+            color: #d0c0c0;
+            border: 2px solid rgba(139, 0, 0, 0.5);
+        }
+
+        .filter-group select:hover,
+        .filter-group select:focus {
+            border-color: rgba(180, 30, 30, 0.7);
+            box-shadow: 0 0 15px rgba(139, 0, 0, 0.15);
+        }
+
+        .entry-card {
+            background: linear-gradient(135deg, rgba(30, 10, 15, 0.85) 0%, rgba(15, 5, 10, 0.85) 100%);
+            border: 2px solid rgba(139, 0, 0, 0.5);
+        }
+
+        .entry-card:hover {
+            border-color: rgba(180, 30, 30, 0.7);
+            box-shadow: 0 12px 35px rgba(139, 0, 0, 0.3);
+        }
+
+        .entry-card h3 a {
+            color: #d8c8c8;
+            font-family: 'Playfair Display', 'Georgia', serif;
+        }
+
+        .entry-card h3 a:hover {
+            color: #e8d0d0;
+        }
+
+        .entry-type-badge {
+            background: rgba(139, 0, 0, 0.4);
+            color: #e8d0d0;
+        }
+
+        .entry-summary {
+            color: #a08080;
+        }
+
+        .entry-meta {
+            color: #807070;
+            border-top: 1px solid rgba(139, 0, 0, 0.2);
+        }
+
+        .entry-header {
+            background: linear-gradient(135deg, rgba(30, 10, 15, 0.85) 0%, rgba(15, 5, 10, 0.85) 100%);
+            border: 2px solid rgba(139, 0, 0, 0.5);
+        }
+
+        .entry-header h1 {
+            font-family: 'Playfair Display', 'Georgia', serif;
+            color: #e8d0d0;
+            text-shadow: 0 0 25px rgba(139, 0, 0, 0.5);
+        }
+
+        .edit-link {
+            color: #a08080;
+            border: 2px solid rgba(139, 0, 0, 0.5);
+            background: rgba(139, 0, 0, 0.1);
+        }
+
+        .edit-link:hover {
+            color: #e8d0d0;
+            background: rgba(139, 0, 0, 0.3);
+            border-color: rgba(180, 30, 30, 0.7);
+        }
+
+        .entry-main-image {
+            background: linear-gradient(135deg, rgba(30, 10, 15, 0.7) 0%, rgba(15, 5, 10, 0.7) 100%);
+            border: 2px solid rgba(139, 0, 0, 0.4);
+        }
+
+        .entry-main-image img {
+            border: 2px solid rgba(139, 0, 0, 0.5);
+        }
+
+        .entry-summary-box {
+            background: linear-gradient(135deg, rgba(30, 10, 15, 0.75) 0%, rgba(15, 5, 10, 0.75) 100%);
+            border: 2px solid rgba(139, 0, 0, 0.3);
+            border-left: 5px solid #8b0000;
+            color: #a08080;
+        }
+
+        .entry-body {
+            background: linear-gradient(135deg, rgba(30, 10, 15, 0.85) 0%, rgba(15, 5, 10, 0.85) 100%);
+            border: 2px solid rgba(139, 0, 0, 0.5);
+            color: #c8b8b8;
+        }
+
+        .entry-tags {
+            background: linear-gradient(135deg, rgba(30, 10, 15, 0.75) 0%, rgba(15, 5, 10, 0.75) 100%);
+            border: 2px solid rgba(139, 0, 0, 0.35);
+        }
+
+        .tags-label {
+            color: #a08080;
+        }
+
+        .tag {
+            background: rgba(139, 0, 0, 0.3);
+            color: #e8d0d0;
+            border: 1px solid rgba(139, 0, 0, 0.5);
+        }
+
+        .tag:hover {
+            background: rgba(139, 0, 0, 0.45);
+            box-shadow: 0 0 10px rgba(139, 0, 0, 0.3);
+        }
+
+        .entry-metadata {
+            background: linear-gradient(135deg, rgba(30, 10, 15, 0.7) 0%, rgba(15, 5, 10, 0.7) 100%);
+            border: 2px solid rgba(139, 0, 0, 0.35);
+            color: #807070;
+        }
+
+        .related-section,
+        .similar-section {
+            background: linear-gradient(135deg, rgba(30, 10, 15, 0.75) 0%, rgba(15, 5, 10, 0.75) 100%);
+            border: 2px solid rgba(139, 0, 0, 0.4);
+        }
+
+        .related-section h2,
+        .similar-section h2 {
+            font-family: 'Playfair Display', 'Georgia', serif;
+            color: #e8d0d0;
+            border-bottom: 1px solid rgba(139, 0, 0, 0.3);
+        }
+
+        .related-list li,
+        .similar-list li {
+            background: rgba(15, 5, 10, 0.4);
+            border: 1px solid rgba(139, 0, 0, 0.15);
+        }
+
+        .related-list li:hover,
+        .similar-list li:hover {
+            background: rgba(60, 20, 30, 0.4);
+            border-color: rgba(180, 30, 30, 0.3);
+        }
+
+        .related-list li a,
+        .similar-list li a {
+            color: #d8c8c8;
+        }
+
+        .related-list li a:hover,
+        .similar-list li a:hover {
+            color: #e8d0d0;
+        }
+
+        .search-form {
+            background: linear-gradient(135deg, rgba(30, 10, 15, 0.85) 0%, rgba(15, 5, 10, 0.85) 100%);
+            border: 2px solid rgba(139, 0, 0, 0.5);
+        }
+
+        .search-input {
+            background: rgba(15, 5, 10, 0.9);
+            color: #d0c0c0;
+            border: 2px solid rgba(139, 0, 0, 0.5);
+        }
+
+        .search-input:focus {
+            border-color: rgba(180, 30, 30, 0.7);
+            box-shadow: 0 0 15px rgba(139, 0, 0, 0.2);
+        }
+
+        .search-button {
+            background: linear-gradient(135deg, rgba(139, 0, 0, 0.4) 0%, rgba(80, 0, 0, 0.4) 100%);
+            color: #e8d0d0;
+            border: 2px solid rgba(139, 0, 0, 0.6);
+        }
+
+        .search-button:hover {
+            background: linear-gradient(135deg, rgba(139, 0, 0, 0.6) 0%, rgba(80, 0, 0, 0.6) 100%);
+            border-color: rgba(180, 30, 30, 0.9);
+            box-shadow: 0 5px 20px rgba(139, 0, 0, 0.35);
+        }
+
+        .search-results {
+            background: linear-gradient(135deg, rgba(30, 10, 15, 0.85) 0%, rgba(15, 5, 10, 0.85) 100%);
+            border: 2px solid rgba(139, 0, 0, 0.5);
+        }
+
+        .search-results h2 {
+            font-family: 'Playfair Display', 'Georgia', serif;
+            color: #e8d0d0;
+        }
+
+        .result-count {
+            color: #a08080;
+            border-bottom: 1px solid rgba(139, 0, 0, 0.3);
+        }
+
+        .result-card {
+            background: rgba(15, 5, 10, 0.5);
+            border: 2px solid rgba(139, 0, 0, 0.35);
+        }
+
+        .result-card:hover {
+            background: rgba(60, 20, 30, 0.4);
+            border-color: rgba(180, 30, 30, 0.5);
+        }
+
+        .result-card h3 a {
+            color: #d8c8c8;
+            font-family: 'Playfair Display', 'Georgia', serif;
+        }
+
+        .result-card h3 a:hover {
+            color: #e8d0d0;
+        }
+
+        .result-summary {
+            color: #a08080;
+        }
+
+        .no-results,
+        .no-entries {
+            color: #807070;
+            background: rgba(15, 5, 10, 0.4);
+        }
+
+        .type-heading {
+            font-family: 'Playfair Display', 'Georgia', serif;
+            color: #e8d0d0;
+            background: linear-gradient(135deg, rgba(30, 10, 15, 0.85) 0%, rgba(15, 5, 10, 0.85) 100%);
+            border: 2px solid rgba(139, 0, 0, 0.5);
+            text-shadow: 0 0 20px rgba(139, 0, 0, 0.4);
+        }
+
+        .back-to-wiki a {
+            color: #a08080;
+            border: 2px solid rgba(139, 0, 0, 0.5);
+            background: rgba(139, 0, 0, 0.1);
+        }
+
+        .back-to-wiki a:hover {
+            color: #e8d0d0;
+            background: rgba(139, 0, 0, 0.3);
+            border-color: rgba(180, 30, 30, 0.7);
+            box-shadow: 0 5px 20px rgba(139, 0, 0, 0.25);
+        }
+
+        .wiki-form h2 {
+            font-family: 'Playfair Display', 'Georgia', serif;
+            color: #e8d0d0;
+            text-shadow: 0 0 15px rgba(139, 0, 0, 0.3);
+        }
+
+        .entry-form {
+            background: linear-gradient(135deg, rgba(30, 10, 15, 0.85) 0%, rgba(15, 5, 10, 0.85) 100%);
+            border: 2px solid rgba(139, 0, 0, 0.5);
+        }
+
+        .form-group label {
+            color: #a08080;
+        }
+
+        .form-input,
+        .form-select,
+        .form-textarea {
+            background: rgba(15, 5, 10, 0.9);
+            color: #d0c0c0;
+            border: 2px solid rgba(139, 0, 0, 0.5);
+        }
+
+        .form-input:focus,
+        .form-select:focus,
+        .form-textarea:focus {
+            border-color: rgba(180, 30, 30, 0.7);
+            box-shadow: 0 0 15px rgba(139, 0, 0, 0.15);
+        }
+
+        .submit-button {
+            background: linear-gradient(135deg, rgba(139, 0, 0, 0.4) 0%, rgba(80, 0, 0, 0.4) 100%);
+            color: #e8d0d0;
+            border: 2px solid rgba(139, 0, 0, 0.6);
+        }
+
+        .submit-button:hover {
+            background: linear-gradient(135deg, rgba(139, 0, 0, 0.6) 0%, rgba(80, 0, 0, 0.6) 100%);
+            border-color: rgba(180, 30, 30, 0.9);
+            box-shadow: 0 5px 20px rgba(139, 0, 0, 0.3);
+        }
+
+        .cancel-link {
+            color: #a08080;
+            border: 2px solid rgba(139, 0, 0, 0.5);
+            background: rgba(139, 0, 0, 0.1);
+        }
+
+        .cancel-link:hover {
+            color: #e8d0d0;
+            background: rgba(139, 0, 0, 0.3);
+            border-color: rgba(180, 30, 30, 0.7);
+        }
+
+        .wiki-footer a {
+            color: #a08080;
+            border: 2px solid rgba(139, 0, 0, 0.5);
+            background: rgba(139, 0, 0, 0.1);
+        }
+
+        .wiki-footer a:hover {
+            color: #e8d0d0;
+            background: rgba(139, 0, 0, 0.3);
+            border-color: rgba(180, 30, 30, 0.7);
+            box-shadow: 0 5px 20px rgba(139, 0, 0, 0.25);
+        }
+
+        /* Lore Page Styles */
+        .lore-content {
+            max-width: 800px;
+            margin: 2rem auto;
+        }
+
+        .lore-section {
+            background: linear-gradient(135deg, rgba(30, 10, 15, 0.85) 0%, rgba(15, 5, 10, 0.85) 100%);
+            border: 2px solid rgba(139, 0, 0, 0.5);
+            border-radius: 10px;
+            padding: 2rem;
+            text-align: center;
+        }
+
+        .lore-section h2 {
+            font-family: 'Playfair Display', 'Georgia', serif;
+            color: #e8d0d0;
+            font-size: 1.6rem;
+            margin-bottom: 1rem;
+            text-shadow: 0 0 15px rgba(139, 0, 0, 0.5);
+        }
+
+        .lore-section p {
+            color: #a08080;
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
+        }
+
+        .wiki-link-container {
+            margin-top: 1rem;
+        }
+
+        .wiki-link-button {
+            display: inline-block;
+            padding: 0.8rem 2rem;
+            background: linear-gradient(135deg, rgba(139, 0, 0, 0.4) 0%, rgba(80, 0, 0, 0.4) 100%);
+            color: #e8d0d0;
+            border: 2px solid rgba(139, 0, 0, 0.6);
+            border-radius: 8px;
+            text-decoration: none;
+            font-family: 'Playfair Display', 'Georgia', serif;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+        }
+
+        .wiki-link-button:hover {
+            background: linear-gradient(135deg, rgba(139, 0, 0, 0.6) 0%, rgba(80, 0, 0, 0.6) 100%);
+            border-color: rgba(180, 30, 30, 0.8);
+            box-shadow: 0 4px 15px rgba(139, 0, 0, 0.4);
+            transform: translateY(-2px);
+        }

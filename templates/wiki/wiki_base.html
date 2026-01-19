@@ -1,0 +1,56 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Wiki - {{ system.name }}{% endblock %}</title>
+    {% if system.slug == 'dnd' %}
+    <link rel="stylesheet" href="{% static 'css/dnd.css' %}">
+    {% elif system.slug == 'vampire' %}
+    <link rel="stylesheet" href="{% static 'css/vampire.css' %}">
+    {% elif system.slug == 'kult' %}
+    <link rel="stylesheet" href="{% static 'css/kult.css' %}">
+    {% elif system.slug == 'daggerheart' %}
+    <link rel="stylesheet" href="{% static 'css/daggerheart.css' %}">
+    {% else %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    {% endif %}
+    <link rel="stylesheet" href="{% static 'css/wiki.css' %}">
+</head>
+<body>
+    <div class="container">
+        <h1 class="title">{{ system.name }} Wiki</h1>
+        <p class="subtitle">Enzyklopädie des Wissens</p>
+
+        <nav class="wiki-nav">
+            <ul class="wiki-nav-links">
+                <li><a href="{% url 'wiki:wiki_home' system.slug %}"{% if request.resolver_match.url_name == 'wiki_home' %} class="active"{% endif %}>Übersicht</a></li>
+                <li><a href="{% url 'wiki:wiki_list' system.slug %}"{% if request.resolver_match.url_name == 'wiki_list' %} class="active"{% endif %}>Alle Einträge</a></li>
+                <li><a href="{% url 'wiki:wiki_search' system.slug %}?q="{% if request.resolver_match.url_name == 'wiki_search' %} class="active"{% endif %}>Suche</a></li>
+                {% if user.is_authenticated %}
+                <li><a href="{% url 'wiki:wiki_create' system.slug %}"{% if request.resolver_match.url_name == 'wiki_create' %} class="active"{% endif %}>Neuer Eintrag</a></li>
+                {% endif %}
+            </ul>
+        </nav>
+
+        <div class="wiki-content">
+            {% block content %}{% endblock %}
+        </div>
+
+        <div class="wiki-footer">
+            {% if system.slug == 'dnd' %}
+            <a href="{% url 'dnd_lore' %}">Zurück zu {{ system.name }}</a>
+            {% elif system.slug == 'vampire' %}
+            <a href="{% url 'vampire_lore' %}">Zurück zu {{ system.name }}</a>
+            {% elif system.slug == 'kult' %}
+            <a href="{% url 'kult_lore' %}">Zurück zu {{ system.name }}</a>
+            {% elif system.slug == 'daggerheart' %}
+            <a href="{% url 'daggerheart_lore' %}">Zurück zu {{ system.name }}</a>
+            {% else %}
+            <a href="{% url 'index' %}">Zurück zur Startseite</a>
+            {% endif %}
+        </div>
+    </div>
+</body>
+</html>

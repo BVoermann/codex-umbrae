@@ -6,19 +6,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ site_title }}</title>
     <link rel="stylesheet" href="{% static stylesheet %}">
+    <link rel="stylesheet" href="{% static 'css/wiki.css' %}">
 </head>
 <body>
     <div class="container">
         {% include 'title_and_navbar.html' %}
-        {% include lore %}
-
-        <div style="text-align: center; color: #e0e0e0; max-width: 800px; margin: 0 auto;">
-            <p style="font-size: 1.2rem; margin-bottom: 1.5rem;">
-                Campaign management and tracking.
-            </p>
-            <p style="font-style: italic; color: #b8b8d1;">
-                Content coming soon...
-            </p>
+        <div class="lore-content">
+            <div class="lore-section">
+                <h2>Wiki</h2>
+                <p>Entdecke das gesammelte Wissen über Orte, Charaktere, Fraktionen und mehr.</p>
+                <div class="wiki-link-container">
+                    {% if url_home == 'dnd_home' %}
+                    <a href="{% url 'wiki:wiki_home' 'dnd' %}" class="wiki-link-button">Zum Wiki</a>
+                    {% elif url_home == 'vampire_home' %}
+                    <a href="{% url 'wiki:wiki_home' 'vampire' %}" class="wiki-link-button">Zum Wiki</a>
+                    {% elif url_home == 'kult_home' %}
+                    <a href="{% url 'wiki:wiki_home' 'kult' %}" class="wiki-link-button">Zum Wiki</a>
+                    {% elif url_home == 'daggerheart_home' %}
+                    <a href="{% url 'wiki:wiki_home' 'daggerheart' %}" class="wiki-link-button">Zum Wiki</a>
+                    {% endif %}
+                </div>
+            </div>
         </div>
     </div>
 </body>

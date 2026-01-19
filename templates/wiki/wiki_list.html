@@ -1,0 +1,61 @@
+{% extends 'wiki/wiki_base.html' %}
+
+{% block title %}Alle Einträge - {{ system.name }} Wiki{% endblock %}
+
+{% block content %}
+<div class="wiki-list">
+    <div class="wiki-filters">
+        <form method="get" class="filter-form">
+            <div class="filter-group">
+                <label for="type-filter">Kategorie:</label>
+                <select name="type" id="type-filter" onchange="this.form.submit()">
+                    <option value="">Alle</option>
+                    {% for entry_type in entry_types %}
+                    <option value="{{ entry_type.0 }}"{% if selected_type == entry_type.0 %} selected{% endif %}>{{ entry_type.1 }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+            <div class="filter-group">
+                <label for="sort-filter">Sortieren:</label>
+                <select name="sort" id="sort-filter" onchange="this.form.submit()">
+                    <option value="title"{% if selected_sort == 'title' %} selected{% endif %}>Alphabetisch</option>
+                    <option value="recent"{% if selected_sort == 'recent' %} selected{% endif %}>Neueste</option>
+                    <option value="updated"{% if selected_sort == 'updated' %} selected{% endif %}>Zuletzt aktualisiert</option>
+                    <option value="popular"{% if selected_sort == 'popular' %} selected{% endif %}>Beliebteste</option>
+                </select>
+            </div>
+            {% if selected_tag %}
+            <input type="hidden" name="tag" value="{{ selected_tag }}">
+            <div class="active-tag">
+                Tag: <span>{{ selected_tag }}</span>
+                <a href="?type={{ selected_type|default:'' }}&sort={{ selected_sort }}" class="remove-tag">&times;</a>
+            </div>
+            {% endif %}
+        </form>
+    </div>
+
+    <div class="entries-grid">
+        {% for entry in entries %}
+        <article class="entry-card">
+            {% if entry.image %}
+            <div class="entry-image">
+                <img src="{{ entry.image.url }}" alt="{{ entry.title }}">
+            </div>
+            {% endif %}
+            <div class="entry-content">
+                <h3><a href="{% url 'wiki:wiki_detail' system.slug entry.slug %}">{{ entry.title }}</a></h3>
+                <span class="entry-type-badge">{{ entry.get_entry_type_display }}</span>
+                {% if entry.summary %}
+                <p class="entry-summary">{{ entry.summary|truncatewords:25 }}</p>
+                {% endif %}
+                <div class="entry-meta">
+                    <span class="entry-views">{{ entry.views }} Aufrufe</span>
+                </div>
+            </div>
+        </article>
+        {% empty %}
+        <p class="no-entries">Keine Einträge gefunden.</p>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}

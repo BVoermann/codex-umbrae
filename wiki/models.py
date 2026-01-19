@@ -120,7 +120,13 @@ class WikiEntry(models.Model):
         ]
 
     def __str__(self):
-        return f"{self.title} ({self.system.name}"
+        return f"{self.title} ({self.system.name})"
+
+    def get_absolute_url(self):
+        return reverse('wiki:wiki_detail', kwargs={
+            'system_slug': self.system.slug,
+            'entry_slug': self.slug
+        })
 
     # auto-generates slug from title, if no slug is given
     def save(self, *args, **kwargs):

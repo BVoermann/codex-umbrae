@@ -1,0 +1,78 @@
+{% extends 'wiki/wiki_base.html' %}
+
+{% block title %}Wiki Übersicht - {{ system.name }}{% endblock %}
+
+{% block content %}
+<div class="wiki-home">
+    <div class="wiki-stats">
+        <div class="stat-card">
+            <span class="stat-number">{{ total_entries }}</span>
+            <span class="stat-label">Einträge</span>
+        </div>
+    </div>
+
+    <div class="wiki-sections">
+        <section class="wiki-section">
+            <h2>Kategorien</h2>
+            <div class="category-grid">
+                {% for entry_type in entry_types %}
+                <a href="{% url 'wiki:wiki_by_type' system.slug entry_type.0 %}" class="category-card">
+                    <span class="category-icon">
+                        {% if entry_type.0 == 'location' %}&#x1F3F0;{% endif %}
+                        {% if entry_type.0 == 'npc' %}&#x1F464;{% endif %}
+                        {% if entry_type.0 == 'player_character' %}&#x2694;{% endif %}
+                        {% if entry_type.0 == 'item' %}&#x1F48E;{% endif %}
+                        {% if entry_type.0 == 'faction' %}&#x1F6E1;{% endif %}
+                        {% if entry_type.0 == 'event' %}&#x1F4DC;{% endif %}
+                        {% if entry_type.0 == 'creature' %}&#x1F432;{% endif %}
+                        {% if entry_type.0 == 'deity' %}&#x2728;{% endif %}
+                        {% if entry_type.0 == 'spell' %}&#x1FA84;{% endif %}
+                        {% if entry_type.0 == 'other' %}&#x1F4D6;{% endif %}
+                    </span>
+                    <span class="category-name">{{ entry_type.1 }}</span>
+                    {% for count in entry_counts %}
+                        {% if count.entry_type == entry_type.0 %}
+                        <span class="category-count">{{ count.count }}</span>
+                        {% endif %}
+                    {% endfor %}
+                </a>
+                {% endfor %}
+            </div>
+        </section>
+
+        <div class="wiki-columns">
+            <section class="wiki-section">
+                <h2>Neueste Einträge</h2>
+                {% if recent_entries %}
+                <ul class="entry-list">
+                    {% for entry in recent_entries %}
+                    <li>
+                        <a href="{% url 'wiki:wiki_detail' system.slug entry.slug %}">{{ entry.title }}</a>
+                        <span class="entry-type">{{ entry.get_entry_type_display }}</span>
+                    </li>
+                    {% endfor %}
+                </ul>
+                {% else %}
+                <p class="no-entries">Noch keine Einträge vorhanden.</p>
+                {% endif %}
+            </section>
+
+            <section class="wiki-section">
+                <h2>Beliebte Einträge</h2>
+                {% if popular_entries %}
+                <ul class="entry-list">
+                    {% for entry in popular_entries %}
+                    <li>
+                        <a href="{% url 'wiki:wiki_detail' system.slug entry.slug %}">{{ entry.title }}</a>
+                        <span class="entry-views">{{ entry.views }} Aufrufe</span>
+                    </li>
+                    {% endfor %}
+                </ul>
+                {% else %}
+                <p class="no-entries">Noch keine Einträge vorhanden.</p>
+                {% endif %}
+            </section>
+        </div>
+    </div>
+</div>
+{% endblock %}

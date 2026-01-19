@@ -15,7 +15,9 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, include
+from django.conf import settings
+from django.conf.urls.static import static
 from . import views
 from . import auth_views
 from vampire import views as vampire_views
@@ -53,4 +55,7 @@ urlpatterns = [
     path('vampire/sessions', vampire_views.sessions, name='vampire_sessions'),
     path('vampire/lore/', vampire_views.lore, name='vampire_lore'),
     path('vampire/characters', vampire_views.characters, name='vampire_characters'),
-]
+
+    # Wiki URLs
+    path('wiki/', include('wiki.urls', namespace='wiki')),
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

@@ -1,0 +1,73 @@
+{% extends 'wiki/wiki_base.html' %}
+
+{% block title %}{{ entry.title }} - {{ system.name }} Wiki{% endblock %}
+
+{% block content %}
+<article class="wiki-detail">
+    <header class="entry-header">
+        <h1>{{ entry.title }}</h1>
+        <span class="entry-type-badge large">{{ entry.get_entry_type_display }}</span>
+        {% if user.is_authenticated %}
+        <a href="{% url 'wiki:wiki_edit' system.slug entry.slug %}" class="edit-link">Bearbeiten</a>
+        {% endif %}
+    </header>
+
+    {% if entry.image %}
+    <div class="entry-main-image">
+        <img src="{{ entry.image.url }}" alt="{{ entry.title }}">
+    </div>
+    {% endif %}
+
+    {% if entry.summary %}
+    <div class="entry-summary-box">
+        <p>{{ entry.summary }}</p>
+    </div>
+    {% endif %}
+
+    <div class="entry-body">
+        {{ entry.content|linebreaks }}
+    </div>
+
+    {% if entry.tags %}
+    <div class="entry-tags">
+        <span class="tags-label">Tags:</span>
+        {% for tag in entry.get_tags_list %}
+        <a href="{% url 'wiki:wiki_list' system.slug %}?tag={{ tag }}" class="tag">{{ tag }}</a>
+        {% endfor %}
+    </div>
+    {% endif %}
+
+    <div class="entry-metadata">
+        <span class="meta-item">Erstellt: {{ entry.created_at|date:"d.m.Y" }}</span>
+        <span class="meta-item">Aktualisiert: {{ entry.updated_at|date:"d.m.Y" }}</span>
+        <span class="meta-item">{{ entry.views }} Aufrufe</span>
+    </div>
+
+    {% if related_entries %}
+    <section class="related-section">
+        <h2>Verknüpfte Einträge</h2>
+        <ul class="related-list">
+            {% for related in related_entries %}
+            <li>
+                <a href="{% url 'wiki:wiki_detail' system.slug related.slug %}">{{ related.title }}</a>
+                <span class="entry-type">{{ related.get_entry_type_display }}</span>
+            </li>
+            {% endfor %}
+        </ul>
+    </section>
+    {% endif %}
+
+    {% if similar_entries %}
+    <section class="similar-section">
+        <h2>Ähnliche Einträge</h2>
+        <ul class="similar-list">
+            {% for similar in similar_entries %}
+            <li>
+                <a href="{% url 'wiki:wiki_detail' system.slug similar.slug %}">{{ similar.title }}</a>
+            </li>
+            {% endfor %}
+        </ul>
+    </section>
+    {% endif %}
+</article>
+{% endblock %}
