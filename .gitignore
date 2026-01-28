@@ -13,7 +13,6 @@ venv/
 staticfiles/
 db.sqlite3
 codexumbrae/__pycache__/*
-venv/
-.idea/
-db.sqlite3
 .env
+deploy.sh
+hooks.json
