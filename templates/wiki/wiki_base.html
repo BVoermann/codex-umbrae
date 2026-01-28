@@ -40,13 +40,13 @@
 
         <div class="wiki-footer">
             {% if system.slug == 'dnd' %}
-            <a href="{% url 'dnd_lore' %}">Zurück zu {{ system.name }}</a>
+            <a href="{% url 'dnd_home' %}">Zurück zu {{ system.name }}</a>
             {% elif system.slug == 'vampire' %}
-            <a href="{% url 'vampire_lore' %}">Zurück zu {{ system.name }}</a>
+            <a href="{% url 'vampire_home' %}">Zurück zu {{ system.name }}</a>
             {% elif system.slug == 'kult' %}
-            <a href="{% url 'kult_lore' %}">Zurück zu {{ system.name }}</a>
+            <a href="{% url 'kult_home' %}">Zurück zu {{ system.name }}</a>
             {% elif system.slug == 'daggerheart' %}
-            <a href="{% url 'daggerheart_lore' %}">Zurück zu {{ system.name }}</a>
+            <a href="{% url 'daggerheart_home' %}">Zurück zu {{ system.name }}</a>
             {% else %}
             <a href="{% url 'index' %}">Zurück zur Startseite</a>
             {% endif %}
