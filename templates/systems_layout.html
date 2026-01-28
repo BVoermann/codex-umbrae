@@ -82,6 +82,11 @@
 
                   // Show the campaign-grid
                   campaignGrid.classList.add('visible');
+
+                  // Scroll to the campaign-grid after it becomes visible
+                  setTimeout(function() {
+                      campaignGrid.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                  }, 50);
               });
           });
 
