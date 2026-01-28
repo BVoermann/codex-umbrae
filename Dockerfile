@@ -14,7 +14,13 @@ RUN pip install --no-cache-dir -r requirements.txt
 
 COPY . .
 
-RUN python manage.py collectstatic --noinput
+# Dummy values for collectstatic - real values provided at runtime
+RUN SECRET_KEY=build-only-dummy-key \
+    DND_PASSWORD=x \
+    VAMPIRE_PASSWORD=x \
+    KULT_PASSWORD=x \
+    DAGGERHEART_PASSWORD=x \
+    python manage.py collectstatic --noinput
 
 EXPOSE 8000
 

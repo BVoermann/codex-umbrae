@@ -26,7 +26,7 @@ SECRET_KEY = config('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["codex-umbrae.de", "www.codex-umbrae.de"]
+ALLOWED_HOSTS = ["codex-umbrae.de", "www.codex-umbrae.de", "localhost"]
 
 
 # Application definition
