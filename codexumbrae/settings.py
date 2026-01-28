@@ -27,7 +27,10 @@ SECRET_KEY = config('SECRET_KEY')
 DEBUG = True
 
 ALLOWED_HOSTS = ["codex-umbrae.de", "www.codex-umbrae.de", "localhost"]
-
+CSRF_TRUSTED_ORIGINS = [
+	"https://codex-umbrae.de",
+	"https://www.codex-umbrae.de",
+]
 
 # Application definition
 
