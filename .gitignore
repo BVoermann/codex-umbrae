@@ -10,6 +10,7 @@ vampire/migrations/__pycache__/*
 *.pyc
 venv/
 .idea/
+staticfiles/
 db.sqlite3
 codexumbrae/__pycache__/*
 venv/

@@ -1,11 +1,14 @@
 services:
   web:
     build: .
+    container_name: django_app
     ports:
       - "8000:8000"
     volumes:
+      - .:/app
       - ./db.sqlite3:/app/db.sqlite3
       - ./media:/app/media
+      - ./staticfiles:/app/staticfiles
     env_file:
       - .env
     restart: unless-stopped
