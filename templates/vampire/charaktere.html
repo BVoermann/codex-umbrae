@@ -49,6 +49,27 @@
             </div>
             <img src="{% static 'pictures/vampire/BBNA/Group.png' %}" class="group-image" alt="Group">
             {% endif %}
+
+            {% if request.GET.campaign == "Turin-By-Night-Camarilla" %}
+            <div class="character-card">
+                <h2>Mirabella Giuffrieda</h2>
+                <img src="{% static 'pictures/vampire/TBNC/Mirabella.webp' %}" class="character-portrait" alt="Mirabella_1">
+                <img src="{% static 'pictures/vampire/TBNC/Mirabella_2.webp' %}" class="character-portrait" alt="Mirabella_2">
+                <img src="{% static 'pictures/vampire/TBNC/Mirabella_3.webp' %}" class="character-portrait" alt="Mirabella_3">
+                <iframe src="{% static 'sheets/vampire/TBNC/Mirabella.pdf' %}" class="character-sheet"></iframe>
+            </div>
+            <div class="character-card">
+                <h2>Cosima Giordano</h2>
+                <img src="{% static 'pictures/vampire/TBNC/Cosima.png' %}" class="character-portrait" alt="Cosima">
+                <iframe src="{% static 'sheets/vampire/TBNC/Cosima.pdf' %}" class="character-sheet"></iframe>
+            </div>
+            <div class="character-card">
+                <h2>Contessa Vittoria di Savoia</h2>
+                <img src="{% static 'pictures/vampire/TBNC/Vittoria.jpg' %}" class="character-portrait" alt="Vittoria">
+                <iframe src="{% static 'sheets/vampire/TBNC/Vittoria.pdf' %}" class="character-sheet"></iframe>
+            </div>
+            <img src="{% static 'pictures/vampire/TBNC/Group.png' %}" class="group-image" alt="Group">
+            {% endif %}
         </div>
     </div>
 </body>

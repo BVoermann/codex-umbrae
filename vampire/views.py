@@ -1,7 +1,8 @@
 from django.shortcuts import render
 from vampire.information.context_vampire import context
 from vampire.information.episodes_vampire import (
-    playlist_BBNA, playlist_BBNC, transcripts_first_part_BBNC, transcripts_first_part_BBNA)
+    playlist_BBNA, playlist_BBNC, playlist_TBNC,
+    transcripts_first_part_BBNC, transcripts_first_part_BBNA, transcripts_first_part_TBNC)
 from codexumbrae.auth_views import require_sessions_password
 
 def home(request):
@@ -25,6 +26,10 @@ def sessions(request):
         playlist_url = playlist_BBNA
         transcript_url = transcripts_first_part_BBNA
         episode_range = range(1, 6 + 1)
+    elif campaign_id == "Turin-By-Night-Camarilla":
+        playlist_url = playlist_TBNC
+        transcript_url = transcripts_first_part_TBNC
+        episode_range = range(1, 1 + 1)
     else:
         playlist_url = []
         transcript_url = ""
