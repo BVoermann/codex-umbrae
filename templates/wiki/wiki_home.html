@@ -15,26 +15,22 @@
         <section class="wiki-section">
             <h2>Kategorien</h2>
             <div class="category-grid">
-                {% for entry_type in entry_types %}
-                <a href="{% url 'wiki:wiki_by_type' system.slug entry_type.0 %}" class="category-card">
+                {% for et in entry_types_with_counts %}
+                <a href="{% url 'wiki:wiki_by_type' system.slug et.key %}" class="category-card">
                     <span class="category-icon">
-                        {% if entry_type.0 == 'location' %}&#x1F3F0;{% endif %}
-                        {% if entry_type.0 == 'npc' %}&#x1F464;{% endif %}
-                        {% if entry_type.0 == 'player_character' %}&#x2694;{% endif %}
-                        {% if entry_type.0 == 'item' %}&#x1F48E;{% endif %}
-                        {% if entry_type.0 == 'faction' %}&#x1F6E1;{% endif %}
-                        {% if entry_type.0 == 'event' %}&#x1F4DC;{% endif %}
-                        {% if entry_type.0 == 'creature' %}&#x1F432;{% endif %}
-                        {% if entry_type.0 == 'deity' %}&#x2728;{% endif %}
-                        {% if entry_type.0 == 'spell' %}&#x1FA84;{% endif %}
-                        {% if entry_type.0 == 'other' %}&#x1F4D6;{% endif %}
+                        {% if et.key == 'location' %}&#x1F3F0;{% endif %}
+                        {% if et.key == 'npc' %}&#x1F464;{% endif %}
+                        {% if et.key == 'player_character' %}&#x2694;{% endif %}
+                        {% if et.key == 'item' %}&#x1F48E;{% endif %}
+                        {% if et.key == 'faction' %}&#x1F6E1;{% endif %}
+                        {% if et.key == 'event' %}&#x1F4DC;{% endif %}
+                        {% if et.key == 'creature' %}&#x1F432;{% endif %}
+                        {% if et.key == 'deity' %}&#x2728;{% endif %}
+                        {% if et.key == 'spell' %}&#x1FA84;{% endif %}
+                        {% if et.key == 'other' %}&#x1F4D6;{% endif %}
                     </span>
-                    <span class="category-name">{{ entry_type.1 }}</span>
-                    {% for count in entry_counts %}
-                        {% if count.entry_type == entry_type.0 %}
-                        <span class="category-count">{{ count.count }}</span>
-                        {% endif %}
-                    {% endfor %}
+                    <span class="category-name">{{ et.label }}</span>
+                    <span class="category-count">{{ et.count }}</span>
                 </a>
                 {% endfor %}
             </div>

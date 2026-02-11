@@ -33,10 +33,18 @@ def wiki_home(request, system_slug):
         is_published=True
     ).order_by('-views')[:5]
 
+    entry_counts_dict = {item['entry_type']: item['count'] for item in entry_counts}
+    entry_types_with_counts = [
+        {'key': key, 'label': label, 'count': entry_counts_dict[key]}
+        for key, label in WikiEntry.ENTRY_TYPES
+        if entry_counts_dict.get(key, 0) > 0
+    ]
+
     context = {
         'system': system,
         'total_entries': total_entries,
         'entry_counts': entry_counts,
+        'entry_types_with_counts': entry_types_with_counts,
         'recent_entries': recent_entries,
         'popular_entries': popular_entries,
         'entry_types': WikiEntry.ENTRY_TYPES,
@@ -158,12 +166,14 @@ def wiki_by_type(request, system_slug, entry_type):
     ).order_by('title')
 
     type_display = dict(WikiEntry.ENTRY_TYPES).get(entry_type, entry_type)
+    entry_counts_dict = {item['entry_type']: item['count'] for item in entry_counts}
 
     context = {
         'system': system,
         'entries': entries,
         'entry_type': type_display,
         'type_display': type_display,
+        'entry_counts_dict': entry_counts_dict,
     }
     return render(request, 'wiki/wiki_by_type.html', context)
 
