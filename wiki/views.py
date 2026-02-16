@@ -166,14 +166,12 @@ def wiki_by_type(request, system_slug, entry_type):
     ).order_by('title')
 
     type_display = dict(WikiEntry.ENTRY_TYPES).get(entry_type, entry_type)
-    entry_counts_dict = {item['entry_type']: item['count'] for item in entry_counts}
 
     context = {
         'system': system,
         'entries': entries,
         'entry_type': type_display,
         'type_display': type_display,
-        'entry_counts_dict': entry_counts_dict,
     }
     return render(request, 'wiki/wiki_by_type.html', context)
 
