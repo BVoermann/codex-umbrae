@@ -21,7 +21,7 @@ RUN SECRET_KEY=build-only-dummy-key \
     VAMPIRE_PASSWORD=x \
     KULT_PASSWORD=x \
     DAGGERHEART_PASSWORD=x \
-    python manage.py collectstatic --noinput
+    python3 manage.py collectstatic --noinput
 
 EXPOSE 8000
 
