@@ -16,3 +16,4 @@ codexumbrae/__pycache__/*
 .env
 deploy.sh
 hooks.json
+/media/*
