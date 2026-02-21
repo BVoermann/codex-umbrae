@@ -5,3 +5,7 @@ playlist_TBNC = "https://www.youtube.com/embed/videoseries?si=hMcV8AZPVb42BvtF&a
 transcripts_first_part_BBNC = "https://raw.githubusercontent.com/BVoermann/transcripts/refs/heads/BBN-C/Camarilla%20Session%20"
 transcripts_first_part_BBNA = "https://raw.githubusercontent.com/BVoermann/transcripts/refs/heads/BBN-A/Anarch%20Session%20"
 transcripts_first_part_TBNC = "https://raw.githubusercontent.com/BVoermann/transcripts/refs/heads/TBN-C/Turin_Session_"
+
+git_tree_BBNC = f"https://api.github.com/repos/BVoermann/transcripts/git/trees/BBN-C?recursive=1"
+git_tree_BBNA = f"https://api.github.com/repos/BVoermann/transcripts/git/trees/BBN-A?recursive=1"
+git_tree_TBNC = f"https://api.github.com/repos/BVoermann/transcripts/git/trees/TBN-C?recursive=1"
