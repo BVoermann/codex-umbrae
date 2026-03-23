@@ -13,6 +13,8 @@
     <link rel="stylesheet" href="{% static 'css/kult.css' %}">
     {% elif system.slug == 'daggerheart' %}
     <link rel="stylesheet" href="{% static 'css/daggerheart.css' %}">
+    {% elif system.slug == 'alien' %}
+    <link rel="stylesheet" href="{% static 'css/alien.css' %}">
     {% else %}
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
     {% endif %}
@@ -48,6 +50,8 @@
             <a href="{% url 'kult_home' %}">Zurück zu {{ system.name }}</a>
             {% elif system.slug == 'daggerheart' %}
             <a href="{% url 'daggerheart_home' %}">Zurück zu {{ system.name }}</a>
+            {% elif system.slug == 'alien' %}
+            <a href="{% url 'alien_home' %}">Zurück zu {{ system.name }}</a>
             {% else %}
             <a href="{% url 'index' %}">Zurück zur Startseite</a>
             {% endif %}

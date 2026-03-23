@@ -10,7 +10,9 @@
                 <h2>Wiki</h2>
                 <p>Entdecke das gesammelte Wissen über Orte, Charaktere, Fraktionen und mehr.</p>
                 <div class="wiki-link-container">
-                    {% if url_home == 'dnd_home' %}
+                    {% if url_home == 'alien_home' %}
+                    <a href="{% url 'wiki:wiki_home' 'alien' %}" class="wiki-link-button">Zum Wiki</a>
+                    {% elif url_home == 'dnd_home' %}
                     <a href="{% url 'wiki:wiki_home' 'dnd' %}" class="wiki-link-button">Zum Wiki</a>
                     {% elif url_home == 'vampire_home' %}
                     <a href="{% url 'wiki:wiki_home' 'vampire' %}" class="wiki-link-button">Zum Wiki</a>

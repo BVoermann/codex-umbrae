@@ -1,0 +1,40 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% include 'alien/head.html' %}
+</head>
+<body>
+    <div class="container">
+        <div class="characters-container">
+            {% if request.GET.campaign == "Streitwagen-der-Goetter" %}
+            <div class="character-card">
+                <h2>Vanessa Miller</h2>
+                <img src="{% static 'pictures/alien/Streitwagen_der_Goetter/Vanessa_Miller.jpg' %}" class="character-portrait" alt="Vanessa Miller">
+                <img src="{% static 'sheets/alien/Streitwagen_der_Goetter/Vanessa_Miller_Sheet.png' %}" class="character-sheet-img" alt="Vanessa Miller Sheet">
+            </div>
+            <div class="character-card">
+                <h2>Leah Davis</h2>
+                <img src="{% static 'pictures/alien/Streitwagen_der_Goetter/Leah_Davis.jpg' %}" class="character-portrait" alt="Leah Davis">
+                <img src="{% static 'sheets/alien/Streitwagen_der_Goetter/Leah_Davis_Sheet.png' %}" class="character-sheet-img" alt="Leah Davis Sheet">
+            </div>
+            <div class="character-card">
+                <h2>Lyron Cham</h2>
+                <img src="{% static "pictures/alien/Streitwagen_der_Goetter/Lyron_Cham.jpg" %}" class="character-portrait" alt="Lyron Cham">
+                <img src="{% static "sheets/alien/Streitwagen_der_Goetter/Lyron_Cham_Sheet.png" %}" class="character-sheet-img" alt="Lyron Cham Sheet">
+            </div>
+            <div class="character-card">
+                <h2>Kayla Rye</h2>
+                <img src="{% static 'pictures/alien/Streitwagen_der_Goetter/Kayla_Rye.jpg' %}" class="character-portrait" alt="Kayla Rye">
+                <img src="{% static 'sheets/alien/Streitwagen_der_Goetter/Kayla_Rye_Sheet.png' %}" class="character-sheet-img" alt="Kayla Rye Sheet">
+            </div>
+            <div class="character-card">
+                <h2>John Wilson</h2>
+                <img src="{% static "pictures/alien/Streitwagen_der_Goetter/John_Wilson.jpg" %}" class="character-portrait" alt="John_Wilson">
+                <img src="{% static "sheets/alien/Streitwagen_der_Goetter/John_Wilson_Sheet.png" %}" class="character-sheet-img" alt="John Wilson Sheet">
+            </div>
+            {% endif %}
+        </div>
+    </div>
+</body>
+</html>

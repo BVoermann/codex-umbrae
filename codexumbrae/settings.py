@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'alien',
     'daggerheart',
     'dnd',
     'kult',
@@ -140,4 +141,5 @@ SYSTEM_PASSWORDS = {
     'vampire': config('VAMPIRE_PASSWORD'),
     'kult': config('KULT_PASSWORD'),
     'daggerheart': config('DAGGERHEART_PASSWORD'),
+    'alien': config('ALIEN_PASSWORD'),
 }
