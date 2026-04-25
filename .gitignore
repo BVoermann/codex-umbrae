@@ -17,3 +17,5 @@ codexumbrae/__pycache__/*
 deploy.sh
 hooks.json
 /media/*
+Dockerfile
+docker-compose.yml

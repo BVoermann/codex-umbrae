@@ -17,6 +17,7 @@ COPY . .
 # Dummy values for collectstatic - real values provided at runtime
 RUN SECRET_KEY=build-only-dummy-key \
     DEBUG_STATE=False \
+    ALIEN_PASSWORD=x \
     DND_PASSWORD=x \
     VAMPIRE_PASSWORD=x \
     KULT_PASSWORD=x \
