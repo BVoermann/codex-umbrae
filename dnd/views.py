@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from dnd.information.context_dnd import context
-from dnd.information.episodes_dnd import playlist_UH, playlist_UZ, playlist_GvD
+from dnd.information.episodes_dnd import playlist_UH, playlist_UZ, playlist_GvD, playlist_id_UH, playlist_id_UZ, playlist_id_GvD
 from codexumbrae.auth_views import require_sessions_password
 
 
@@ -19,13 +19,17 @@ def sessions(request):
     campaign_id = request.GET.get('campaign')
     if campaign_id == 'Der-unermessliche-Zerfall':
         playlist_url = playlist_UZ
+        playlist_id = playlist_id_UZ
     elif campaign_id == 'Das-Geheimnis-von-Dyadan':
         playlist_url = playlist_GvD
+        playlist_id = playlist_id_GvD
     elif campaign_id == "Unbekannte-Heimat":
         playlist_url = playlist_UH
+        playlist_id = playlist_id_UH
     else:
         playlist_url = []
-    return render(request, 'systems_sessions.html', context={**context, 'playlist_url': playlist_url,})
+        playlist_id = ""
+    return render(request, 'dnd/sessions.html', context={**context, 'playlist_url': playlist_url, 'playlist_id': playlist_id})
 
 def lore(request):
     """D&D lore page."""

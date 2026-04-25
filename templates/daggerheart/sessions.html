@@ -1,0 +1,177 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+{% include 'systems_head.html' %}
+<body>
+    <div class="container">
+        {% include 'title_and_navbar.html' %}
+        <div style="color: #e0e0e0; max-width: 960px; margin: 0 auto;">
+            {% if playlist_id %}
+            <div class="sessions-layout video-container">
+                <div class="video-section">
+                    <p class="sessions-campaign-title">{{ title }} &mdash; {{ request.GET.campaign }}</p>
+                    <div class="video-frame-wrapper">
+                        <div id="youtube-player"></div>
+                    </div>
+                </div>
+                <div class="playlist-section" id="playlist-section">
+                    <div class="playlist-header">Playlist</div>
+                    <div id="playlist-items" class="playlist-items">
+                        <div class="playlist-loading">Lade Playlist&hellip;</div>
+                    </div>
+                </div>
+            </div>
+            {% else %}
+            <div class="video-container" style="text-align: center;">
+                <p style="color: #888;">Keine Kampagne ausgewählt.</p>
+            </div>
+            {% endif %}
+
+            {% if transcript_url %}
+            <div class="transcript-section">
+                <label for="session-select">Wähle die Session für die du das Transkript herunterladen möchtest:</label>
+                <select id="session-select" name="session">
+                    {% for num in episode_range %}
+                        <option value="{{ num }}">Session {{ num }}</option>
+                    {% endfor %}
+                </select>
+                <br><br>
+                <button id="download-btn">Download Transcript</button>
+            </div>
+            {% endif %}
+        </div>
+    </div>
+
+{% if playlist_id %}
+<script>
+    (function() {
+        var tag = document.createElement('script');
+        tag.src = 'https://www.youtube.com/iframe_api';
+        document.head.appendChild(tag);
+    })();
+
+    var player;
+    var playlistId = '{{ playlist_id }}';
+
+    function onYouTubeIframeAPIReady() {
+        player = new YT.Player('youtube-player', {
+            playerVars: {
+                listType: 'playlist',
+                list: playlistId,
+                autoplay: 0,
+                rel: 0,
+            },
+            events: {
+                onReady: onPlayerReady,
+                onStateChange: onPlayerStateChange,
+            }
+        });
+    }
+
+    function onPlayerReady(event) {
+        var videoIds = player.getPlaylist();
+        if (!videoIds || videoIds.length === 0) {
+            setTimeout(function() { buildPlaylist(player.getPlaylist()); }, 800);
+        } else {
+            buildPlaylist(videoIds);
+        }
+        syncPlaylistHeight();
+    }
+
+    function buildPlaylist(videoIds) {
+        var container = document.getElementById('playlist-items');
+        if (!videoIds || videoIds.length === 0) {
+            container.innerHTML = '<div class="playlist-loading">Keine Videos gefunden.</div>';
+            return;
+        }
+        container.innerHTML = '';
+        videoIds.forEach(function(videoId, index) {
+            var item = document.createElement('div');
+            item.className = 'playlist-item' + (index === 0 ? ' active' : '');
+            item.dataset.index = index;
+
+            var img = document.createElement('img');
+            img.src = 'https://img.youtube.com/vi/' + videoId + '/mqdefault.jpg';
+            img.alt = 'Session ' + (index + 1);
+            img.className = 'playlist-item-thumb';
+
+            var label = document.createElement('span');
+            label.className = 'playlist-item-title';
+            label.textContent = 'Session ' + (index + 1);
+
+            item.appendChild(img);
+            item.appendChild(label);
+            item.addEventListener('click', function() {
+                var idx = parseInt(this.dataset.index);
+                player.playVideoAt(idx);
+                updateActiveItem(idx);
+                var sel = document.getElementById('session-select');
+                if (sel) sel.value = idx + 1;
+            });
+            container.appendChild(item);
+        });
+        syncPlaylistHeight();
+    }
+
+    function onPlayerStateChange(event) {
+        var idx = player.getPlaylistIndex();
+        if (idx >= 0) {
+            updateActiveItem(idx);
+            var sel = document.getElementById('session-select');
+            if (sel) sel.value = idx + 1;
+        }
+    }
+
+    function updateActiveItem(index) {
+        document.querySelectorAll('.playlist-item').forEach(function(item) {
+            item.classList.remove('active');
+        });
+        var active = document.querySelector('.playlist-item[data-index="' + index + '"]');
+        if (active) {
+            active.classList.add('active');
+            active.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
+        }
+    }
+
+    function syncPlaylistHeight() {
+        var wrapper = document.querySelector('.video-frame-wrapper');
+        var panel = document.getElementById('playlist-section');
+        if (wrapper && panel) {
+            var h = wrapper.getBoundingClientRect().height;
+            if (h > 0) panel.style.maxHeight = h + 'px';
+        }
+    }
+
+    window.addEventListener('resize', function() {
+        syncPlaylistHeight();
+    });
+</script>
+{% endif %}
+
+{% if transcript_url %}
+<script>
+    document.getElementById('download-btn').addEventListener('click', async function() {
+        var sessionId = document.getElementById('session-select').value;
+        if (sessionId) {
+            var url = '{{ transcript_url }}' + sessionId + '.txt';
+            try {
+                var response = await fetch(url);
+                var blob = await response.blob();
+                var link = document.createElement('a');
+                link.href = URL.createObjectURL(blob);
+                link.download = '{{ request.GET.campaign }}' + sessionId + '.txt';
+                document.body.appendChild(link);
+                link.click();
+                document.body.removeChild(link);
+                URL.revokeObjectURL(link.href);
+            } catch (error) {
+                alert('Error downloading file');
+            }
+        } else {
+            alert('Bitte wähle zuerst eine Session');
+        }
+    });
+</script>
+{% endif %}
+</body>
+</html>

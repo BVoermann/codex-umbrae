@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from kult.information.context_kult import context
-from kult.information.episodes_kult import playlist_OOD
+from kult.information.episodes_kult import playlist_OOD, playlist_id_OOD
 from codexumbrae.auth_views import require_sessions_password
 
 def home(request):
@@ -18,9 +18,11 @@ def sessions(request):
     campaign_id = request.GET.get('campaign')
     if campaign_id == 'Ordo-Orbis-Dei':
         playlist_url = playlist_OOD
+        playlist_id = playlist_id_OOD
     else:
         playlist_url = []
-    return render(request, 'systems_sessions.html', context={**context, 'playlist_url': playlist_url,})
+        playlist_id = ""
+    return render(request, 'kult/sessions.html', context={**context, 'playlist_url': playlist_url, 'playlist_id': playlist_id})
 
 def lore(request):
     """KULT lore page."""
